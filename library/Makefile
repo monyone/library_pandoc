@@ -70,7 +70,7 @@ pdf: build fix-inner-link $(TARGET).pdf
 
 html: tex-md-clean build $(TARGET).html
 
-markdown: tex-md-clean $(MD_FILES) build
+markdown: tex-md-clean build $(MD_FILES)
 	pandoc -s -r latex $(TARGET).tex -t markdown_github -o $(TARGET).md
 
 make-index: html

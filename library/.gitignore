@@ -1,2 +1,12 @@
 jlisting.sty
 pxjahyper.sty
+
+*/*.tex
+*/*.md
+*/*.java
+
+*.aux
+*.log
+*.out
+*.pdf
+*.toc

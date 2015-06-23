@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
-section_name=$1
-section_file="${section_name}section.tex"
+section_name=`echo $1 | sed 's/\/$//g'`
+section_file="${section_name}/section.tex"
 
 echo "\\section{${section_name}}" > ${section_file}
 
