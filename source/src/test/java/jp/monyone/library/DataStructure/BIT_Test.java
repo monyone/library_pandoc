@@ -1,4 +1,4 @@
-package library.DataStructure;
+package jp.monyone.library.DataStructure;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
