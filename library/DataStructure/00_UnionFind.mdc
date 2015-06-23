@@ -1,0 +1,24 @@
+## Union-Find {#UnionFind}
+素集合管理用のデータ構造. 超頻出データ構造. 
+
+\withoutTeXbegin
+
+### 用途 {.unnumbered}
++ グラフの連結成分の管理
+
+\withoutTeXend
+
+### 計算量 {.unnumbered}
+経路圧縮 + ランク併合 で アッカーマン関数の逆関数になる.
+
+### Source Code {.unnumbered}
+~~~~{UnionFind.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
++ [AOJ DSL-1-A (Disjoint Set: Union Find Tree)](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A)
+
+\withoutTeXend
+

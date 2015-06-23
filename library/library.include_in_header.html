@@ -1,0 +1,58 @@
+<script src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"> </script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  $(document).ready( function () {
+    $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+  });
+</script>
+
+<script type="text/javascript">
+$(function(){
+    var contentHeight = $("html, body").height();
+    var windowHeight = $(window).height();
+    var target = $("#TOC");
+    var targetHeight = target.outerHeight();
+    var targetPosition = target.position();
+    var library = $("#CONTENT");
+    var libraryHeight = library.outerHeight();
+    var libraryPosition = library.position();
+    var footer = $("#FOOTER");
+    var footerHeight = footer.outerHeight();
+
+    //adhoc
+    target.css({position:"fixed", top: targetPosition.top - 1});
+    target.css({position:"fixed", left: targetPosition.left - 1});
+
+    target.outerHeight(Math.max(targetHeight, windowHeight - footerHeight));
+
+    $(window).resize(function(){
+        windowHeight = $(this).height();
+        target.outerHeight(Math.max(targetHeight, windowHeight - footerHeight));
+    });
+    $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop();
+        var visibleBottom = scrollTop + windowHeight;
+        var targetBottom = targetPosition.top + targetHeight;
+        var margin = Math.max(0, windowHeight - targetHeight) + footerHeight;
+        
+        if(scrollTop >= targetPosition.top){
+          if(targetHeight > windowHeight){
+            if(targetBottom <= visibleBottom){
+					    //alert("t");
+              target.css({position:"fixed", top : -targetBottom + windowHeight + 1});
+              //console.log(target.position());
+            }else{
+              target.css({position:"fixed", top: -scrollTop});
+              //console.log(target.position().top + " " + (-targetBottom) + " " + windowHeight);
+            }
+          }else{
+            target.css({position:"fixed", top: 0});
+          }
+        }else{
+          target.css({position:"fixed", top: targetPosition.top - 1}); //default
+        }
+    });
+});
+</script>
+

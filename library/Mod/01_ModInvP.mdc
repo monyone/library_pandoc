@@ -1,0 +1,19 @@
+##逆元 (mod p) {#InvModP}
+$a$の $mod \: p$ での逆元は, フェルマーの小定理より, $a^{-1} = a^{\: p-2} \: (mod \: p)$
+
+### 計算量 {#complecity .unnumbered}
+$O(log \: p)$ ※累乗にバイナリ法が使える
+
+### 依存
++ [累乗 (mod m) \pref{BinaryPowerMethodMOD}](.\library.html#BinaryPowerMethodMOD)
+
+### Source Code {.unnumbered}
+
+~~~~{.java}
+public static long mod_inv(long a, long p){
+	return mod_pow(a, p-2, p);
+}
+~~~~
+
+### Verified {.unnumbered}
+する予定

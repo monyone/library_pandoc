@@ -1,0 +1,97 @@
+\documentclass[a4paper]{jsarticle}
+\usepackage[landscape, twocolumn, top=1.5cm, bottom=1.0cm, left=1.5cm, right=1.5cm]{geometry}
+\setlength{\columnsep}{6zw} 
+
+\usepackage{layout} %デバッグ用
+
+\usepackage{color}
+
+\usepackage{listings}
+\usepackage{jlisting}
+\lstset{
+  breaklines = true,
+  language=Java,
+  basicstyle=\ttfamily\scriptsize,
+  commentstyle={\itshape \color[cmyk]{0.75,0,1,0}},
+  classoffset=1,
+  keywordstyle={\bfseries \color[cmyk]{1,0.4,0.4,0}},
+  stringstyle={\ttfamily \color[rgb]{0,0,1}},
+  frame=tRBl,
+  framesep=5pt,
+  showstringspaces=false,
+  numbers=left,
+  stepnumber=1,
+  numberstyle=\tiny,
+  tabsize=2,
+}
+
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Teihen Library}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\rfoot{}
+\cfoot{}
+
+\makeatletter
+
+\renewcommand{\section}{%
+  \@startsection{section}{1}{\z@}%
+  {0.2\Cvs}{0.2\Cvs}%
+  {\normalfont\Large\headfont\raggedright}}
+
+\renewcommand{\subsection}{%
+  \@startsection{subsection}{2}{\z@}%
+  {0.2\Cvs}{0.2\Cvs}%
+  {\normalfont\large\headfont\raggedright}}
+
+\renewcommand{\subsubsection}{%
+  \@startsection{subsubsection}{1}{\z@}%
+  {0.2\Cvs}{0.1\Cvs}%
+  {\normalfont\large\headfont\raggedright}}
+\makeatother
+
+\renewcommand {\baselinestretch} {0.92}
+
+\newcommand* {\pref}[1]{p.\pageref{#1}}%
+\let\withoutTeXbegin\iffalse
+\let\withoutTeXend\fi
+
+
+\begin{document}
+%\layout
+%\clearpage
+
+%\title{競技プログラミングライブラリ(Java)}
+%\author{もんにょり}
+%\date{} %日付は出力しないように
+%\maketitle
+
+\tableofcontents
+\newpage
+
+\input{./Template/section.tex} 
+
+\input{./DataStructure/section.tex} 
+
+\input{./Graph/section.tex}
+
+\input{./Math/section.tex}
+
+\input{./Mod/section.tex} 
+
+\input{./2DimRealGeometry/section.tex}
+
+\input{./2DimIntGeometry/section.tex}
+
+\input{./String/section.tex}
+
+\input{./Puzzle/section.tex}
+
+
+
+\end{document} 

@@ -1,0 +1,20 @@
+##累乗 (mod m) {#BinaryPowerMethodMOD}
+累乗 $a^e \: (mod \: m)$ に関しては, バイナリ法で高速に計算できる.
+
+### 計算量 {#complecity .unnumbered}
+$O(log \: e)$ ※log(指数)オーダー
+
+### Source Code {.unnumbered}
+再帰関数で計算するコードはこちら.
+
+~~~~{ModPowRec.java}
+~~~~
+
+ループで下位のケタから計算するコードはこちら.
+
+~~~~{ModPowLoop.java}
+~~~~
+
+### Verified {.unnumbered}
+する予定
+

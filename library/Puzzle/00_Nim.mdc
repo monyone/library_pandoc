@@ -1,0 +1,13 @@
+## Nim(山N個, 制限無し) {#Nim}
+全てのxorを取る. 0だったら先手必負, それ以外なら先手必勝
+
+### 計算量 {#complecity .unnumbered}
+
+### Source Code {.unnumbered}
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+
+\withoutTeXend
+

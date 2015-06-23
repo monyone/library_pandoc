@@ -1,0 +1,37 @@
+##中国剰余定理 {#ChineseRemainder}
+$x \; = \; a_i \; (mod \; m_i)$ という条件から, 条件を満たす $x \; (mod \; \prod m_i )$ を求める.
+
+### 計算量 {#complecity .unnumbered}
+$O(条件の数 * log \; \sum \; m_i)$ ※計算量よりオーバーフローに気をつけること
+
+### 依存 {#dependence .unnumbered}
++ [逆元 (mod m) \pref{InvModM}](.\library.html#InvModM)
+
+### Source Code {.unnumbered}
+
+~~~~{.java}
+public static long chinese_remainder(long[] as, long[] ms){
+   	long prod = 1;
+	for(long m : ms){ prod *= m; }
+	
+	long ret = 0;
+	for(int i = 0; i < ms.length; i++){
+		final long M = prod / ms[i];
+		final long inv = mod_inv(M % ms[i], ms[i]);
+		
+		long a = as[i] - as[i] / prod * prod;
+		if(a < 0){ a += prod; }
+		
+		ret = (ret + M * inv * a % prod) % prod;
+	}
+	
+	return ret;
+}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+する予定
+
+\withoutTeXend

@@ -1,0 +1,25 @@
+## 重み付きUnion-Find {#WeightedUnionFind}
+UnionFindで同時にグループ内の重みを管理する.
+同一グループで比較可能な値がオンラインで与えられる場合に使える.
+
+\withoutTeXbegin
+
+### 用途 {.unnumbered}
++ オンラインで比較した情報が渡される場合 (天秤とか)
+
+\withoutTeXend
+
+### 計算量 {.unnumbered}
+経路圧縮 + ランク併合 を使ってるため, アッカーマン関数の逆関数になる.
+
+### Source Code {.unnumbered}
+~~~~{WeightedUnionFind.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered }
++ [AOJ 1330 (Never Wait for Weights)](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1330)
+
+
+\withoutTeXend

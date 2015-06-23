@@ -1,0 +1,21 @@
+##逆元 (mod m) {#InvModM}
+$a$の $mod \: m$ での逆元は, $a$と$m$が互いに素であれば拡張ユークリッドの互助法で求められる.
+
+### 計算量 {#complecity .unnumbered}
+$O(log \: am)$ ※最悪の場合. 平均はかなり早いはず.
+
+### Source Code {.unnumbered}
+
+~~~~{.java}
+// a and m must be co-prime.
+public static long mod_inv(long a, long m){
+	return (a == 1 ? 1 : (1 - m*mod_inv(m%a, a)) / a + m);
+}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+する予定
+
+\withoutTeXend
