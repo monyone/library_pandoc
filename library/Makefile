@@ -2,7 +2,7 @@
 .SUFFIXES: .tex .dvi .pdf .xbb .png .jpg .md .mdc
 
 # Register PHONY target 
-.PHONY: fix-inenr-link derive-source build pdf html make-index tex-md-clean clean dist-clean
+.PHONY: fix-inenr-link derive-source build pdf html markdown make-index tex-md-clean clean dist-clean
 .DEFAULT_GOAL:= pdf
 
 # Register Variable to Default Value
@@ -70,6 +70,9 @@ pdf: build fix-inner-link $(TARGET).pdf
 
 html: tex-md-clean build $(TARGET).html
 
+markdown: tex-md-clean $(MD_FILES) build
+	pandoc -s -r latex $(TARGET).tex -t markdown_github -o $(TARGET).md
+
 make-index: html
 	cp $(TARGET).html index.html
 	sed -i "s/$(TARGET).html/index.html/g" index.html
@@ -81,4 +84,4 @@ clean: tex-md-clean
 	@rm -rf *.dvi *.toc *.aux *.log *.out */*.tex */*.md */*.java
 
 dist-clean: clean
-	@rm -rf $(TARGET).pdf $(TARGET).html index.html 
+	@rm -rf $(TARGET).pdf $(TARGET).html $(TARGET).md index.html 
