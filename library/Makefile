@@ -65,7 +65,9 @@ fix-inner-link: $(CONTENT_TEX_FILES)
 	  sed -i -e 's/\\href{\.\/library\.html\\#\([^\\}]*\)\}/\\hyperref\[\1\]/g' $$file; \
 	done	
 
-build: derive-source $(SECTION_TEX_FILES) $(MDC_FILES)
+build: derive-source $(SECTION_TEX_FILES)
+	touch $(TARGET).tex
+
 
 pdf: build fix-inner-link $(TARGET).pdf
 
