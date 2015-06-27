@@ -6,11 +6,7 @@ $O(log \: am)$ ※最悪の場合. 平均はかなり早いはず.
 
 ### Source Code {.unnumbered}
 
-~~~~{.java}
-// a and m must be co-prime.
-public static long mod_inv(long a, long m){
-	return (a == 1 ? 1 : (1 - m*mod_inv(m%a, a)) / a + m);
-}
+~~~~{InvModM.java}
 ~~~~
 
 \withoutTeXbegin

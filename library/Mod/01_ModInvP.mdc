@@ -9,11 +9,32 @@ $O(log \: p)$ ※累乗にバイナリ法が使える
 
 ### Source Code {.unnumbered}
 
-~~~~{.java}
-public static long mod_inv(long a, long p){
-	return mod_pow(a, p-2, p);
-}
+~~~~{InvModP.java}
 ~~~~
+
+
+\withoutTeXbegin
 
 ### Verified {.unnumbered}
 する予定
+
+\withoutTeXend
+
+##逆元列挙 (mod p) {#EnumInvModP}
+$mod \: p$ の逆元は1からNまで$O(N)$で計算できる.
+
+### 計算量 {#complecity .unnumbered}
+$O(N)$ ※列挙する最大の数
+
+### Source Code {.unnumbered}
+
+~~~~{EnumInvModP.java}
+~~~~
+
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+する予定
+
+\withoutTeXend
