@@ -1,6 +1,6 @@
 package jp.monyone.library.Math;
 
-public class Rational_Inculde {
+public class Rational_Include {
 	//@start
 	// equalsメソッドは eclipse等で生成するなりして作ること
 	public static class Rational implements Comparable<Rational> {

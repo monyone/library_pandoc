@@ -2,7 +2,7 @@ package jp.monyone.library.Math;
 
 import java.math.BigInteger;
 
-public class BigRational_Inculde {
+public class BigRational_Include {
 	//@start
 	// import java.math.BigInteger;
 	public static class BigRational implements Comparable<BigRational>{
