@@ -11,9 +11,6 @@ public class EnumInvModP_Include {
 			inv[i] = p - (p / i) * inv[(int)(p % i)] % p;
 		}
 	}
-	public static long mod_inv(long a, long p){
-		return mod_pow(a, p - 2, p);
-	}
 	//@end
 }
 
