@@ -30,6 +30,6 @@ public class Dice_Include {
 
 			dice[args[0]] = tmp;
 		}
-		//@end
 	}
+	//@end
 }
