@@ -10,15 +10,7 @@
 
 ### Souce Code {.unnumbered}
 
-~~~~{.java}
-public static ArrayList<Integer, Map<Integer,Long>> init_adj(final int n){
-	ArrayList<Integer, LinkedHashMap<Integer, Long>> ret = 
-		new ArrayList<Integer, LinkedHashMap<Integer, Long>>();
-	for(int i = 0; i < n; i++){
-		ret.add(new LinkedHashMap<Integer, Long>());
-	}
-	return ret;
-}
+~~~~{AdjList.java}
 ~~~~
 
 \withoutTeXbegin
