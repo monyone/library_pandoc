@@ -1,6 +1,6 @@
 package jp.monyone.library.DataStructure;
 
-public class SumSegmetTree_Include {
+public class SumSegmentTree_Include {
 	//@start
 	public static class SegTree{
 		int n;
