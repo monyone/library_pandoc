@@ -1,6 +1,6 @@
 package jp.monyone.library.DataStructure;
 
-public class LazySumSegmetTree_Include {
+public class LazySumSegmentTree_Include {
 	//@start
 	public static class LazySegTree{
 		int n;
