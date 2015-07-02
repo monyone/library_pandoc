@@ -1,0 +1,21 @@
+## 動的永続SegmentTree {#PersistentDynamicSumSegmentTree}
+Indexの範囲が広く, updateが密ではない場合, 動的SegTreeも検討すべき.  
+(クエリ先読みができる場合は, 座標圧縮するだけで済む. 要検討.)
+
+
+### 計算量 {#complecity .unnumbered}
++ update(k)  : O(log n) ※単一の値の更新
++ query(s,t): O(log n) ※範囲[s,t)の和の計算
+
+### Source Code {.unnumbered}
+
+~~~~{PersistentDynamicSumSegmentTree.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+TODO
+
+\withoutTeXend
+
