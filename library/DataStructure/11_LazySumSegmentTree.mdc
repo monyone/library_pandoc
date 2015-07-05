@@ -1,4 +1,4 @@
-## 遅延評価SegmentTree {#LasySegmentTree}
+## 遅延評価SegmentTree(総和) {#LasySumSegmentTree}
 SegmentTreeでは区間に対する更新に $O(n \; log\; n)$ かかってしまう.
 
 ### 計算量 {#complecity .unnumbered}

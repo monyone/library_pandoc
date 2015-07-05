@@ -1,4 +1,4 @@
-## SegmentTree {#SegmentTree}
+## SegmentTree(総和) {#SumSegmentTree}
 範囲に関わるクエリを高速に処理するデータ構造.
 
 ### 計算量 {#complecity .unnumbered}

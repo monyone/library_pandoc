@@ -1,0 +1,20 @@
+## 範囲加算RMQ {#RangeAddRangeMinimumQuery}
+範囲加算をサポートした RMQ(Range Minimum Query) の実装.  
+範囲での加算と最小値の計算を効率的に行える.
+
+### 計算量 {#complecity .unnumbered}
++ add(s,t,v) : O(log n) ※範囲[s,t)への加算
++ min(s,t)   : O(log n) ※範囲[s,t)の最小値
+
+### Source Code {.unnumbered}
+
+~~~~{RangeAddRangeMinimumQuery.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+TODO
+
+\withoutTeXend
+

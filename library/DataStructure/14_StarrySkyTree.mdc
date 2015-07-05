@@ -1,0 +1,21 @@
+## StarrySkyTree {#StarrySkyTree}
+範囲の加算と範囲の最大値クエリを効率的に処理するデータ構造.  
+子ノードのうちどちらかは0, もう一方は0以下という制約を設けることで, 
+配列一つで両方のクエリをサポートでき, 記憶域に対してもやさしい構造になっている.
+
+### 計算量 {#complecity .unnumbered}
++ add(s,t,v) : O(log n) ※範囲[s,t)への加算
++ max(s,t)   : O(log n) ※範囲[s,t)の最大値
+
+### Source Code {.unnumbered}
+
+~~~~{StarrySkyTree.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+TODO
+
+\withoutTeXend
+
