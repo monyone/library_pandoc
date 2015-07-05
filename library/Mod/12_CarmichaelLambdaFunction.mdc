@@ -1,6 +1,6 @@
 ## カーマイケルのλ関数 {#CarmichaelLambdaFunction}
 $a^{\lambda(m)} \: = \: 1 \: (mod \: m)$ となる $\lambda(m)$ を計算する.  
-$\lambda(m)$ は, $a^n \: = \: 1 \: (mod \; m)$ となる最小の n で位数と呼ばれる.
+$\lambda(m)$ は, $a^n \: = \: 1 \: (mod \; m)$ となる最小の n である.
 
 ### 計算量 {#complecity .unnumbered}
 $O(m)$
