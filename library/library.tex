@@ -50,9 +50,15 @@
   {\normalfont\large\headfont\raggedright}}
 
 \renewcommand{\subsubsection}{%
-  \@startsection{subsubsection}{1}{\z@}%
+  \@startsection{subsubsection}{3}{\z@}%
   {0.2\Cvs}{0.1\Cvs}%
   {\normalfont\large\headfont\raggedright}}
+
+\renewcommand\paragraph{%
+  \@startsection{paragraph}{4}{\z@}%
+  {0.1\Cvs}{0.1\Cvs}%
+  {\normalfont\normalsize\headfont\raggedright}}
+
 \makeatother
 
 \renewcommand {\baselinestretch} {0.92}
