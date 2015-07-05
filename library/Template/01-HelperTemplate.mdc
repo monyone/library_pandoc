@@ -12,7 +12,7 @@
 ~~~~{EPS.java}
 ~~~~
 
-## 配列ヘルパ関数 {ArrayHelper}
+## 配列ヘルパ関数 {#ArrayHelper}
 java.util.Arrays は弱いので, 適宜ヘルパ関数を定義しておくと便利.
 
 ### Source Code {.unnumbered}
