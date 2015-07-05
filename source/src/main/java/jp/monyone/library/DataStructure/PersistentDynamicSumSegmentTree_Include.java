@@ -47,12 +47,10 @@ public class PersistentDynamicSumSegmentTree_Include {
 				return DEFAULT;
 			}else if(lower <= this.lower && this.upper <= upper){
 				return this.value;
-			}else{
-				final long middle = (this.lower + this.upper) / 2;
-				final long left_sum = left == null ? DEFAULT : left.query(lower, middle);
-				final long right_sum = right == null ? DEFAULT : right.query(middle, upper);
-				return left_sum + right_sum;
 			}
+			final long middle = (this.lower + this.upper) / 2;
+			return (left == null ? DEFAULT : left.query(lower, middle))
+				+ (right == null ? DEFAULT : right.query(middle, upper));
 		}
 	}
 	//@end
