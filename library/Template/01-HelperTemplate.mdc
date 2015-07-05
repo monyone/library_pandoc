@@ -1,0 +1,24 @@
+## 定数 {#ConstantValues}
+
+よく使う定数(INF, EPS等)
+
+### Source Code {.unnumbered}
+~~~~{IntINF.java}
+~~~~
+
+~~~~{LongINF.java}
+~~~~
+
+~~~~{EPS.java}
+~~~~
+
+## 配列ヘルパ関数 {ArrayHelper}
+java.util.Arrays は弱いので, 適宜ヘルパ関数を定義しておくと便利.
+
+### Source Code {.unnumbered}
+
+~~~~{SwapArrayT.java}
+~~~~
+
+~~~~{ReverseArrayT.java}
+~~~~
