@@ -1,0 +1,18 @@
+## オイラーのφ関数 {#EulerPhiFunction}
+$a^{\phi(m)} \: = \: 1 \: (mod \: m)$ となる $\phi(m)$ を計算する.
+
+### 計算量 {#complecity .unnumbered}
+$O(m)$
+
+### Source Code {.unnumbered}
+
+~~~~{EulerPhiFunction.java}
+~~~~
+
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+する予定
+
+\withoutTeXend
