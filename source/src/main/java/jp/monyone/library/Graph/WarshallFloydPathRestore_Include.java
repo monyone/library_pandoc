@@ -4,7 +4,7 @@ public class WarshallFloydPathRestore_Include {
 	//@start
 	// next[i][j] := i -> j へ行く際に, 次に通過する点
 	// for(int cur = start; cur != goal; cur = next[cur][goal]) と順番に辿れる.
-	public static int[][] warshallFloyd(long[][] adj){
+	public static int[][] warshallFloyd(long[][] adj){ // adj に全対最短路が入る.
 		final int n = adj.length;
 
 		int[][] next = new int[n][n];
