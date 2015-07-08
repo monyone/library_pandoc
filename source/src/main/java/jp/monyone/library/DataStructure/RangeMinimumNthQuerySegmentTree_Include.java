@@ -71,16 +71,15 @@ public class RangeMinimumNthQuerySegmentTree_Include {
 			}
 		}
 
-		public long query(int a, int b, int nth){ // [a, b) , nth -> 1-indexed
-			// Long.MAX_VALUE や Long.MIN_VALUE が入ったりするとバグル.
-			long lower = segs[0][0] - 1, upper = segs[0][segs[0].length - 1] + 1;
-			while(upper - lower > 1){
-				final long middle = (lower + upper) / 2;
-				final int ret = query(a, b, middle, 0, 0, this.n);
-				if(ret < nth){ lower = middle; }
-				else{ upper = middle; }
+		public long query(int a, int b, int nth){
+			int lower_index = -1, upper_index = this.n; //(l, u]
+			while(upper_index > lower_index + 1) {
+				final int middle_index = (lower_index + upper_index) / 2;
+				final int ret = query(a, b, segs[0][middle_index], 0, 0, this.n);
+				if (ret < nth) { lower_index = middle_index; }
+				else { upper_index = middle_index; }
 			}
-			return upper;
+			return segs[0][upper_index];
 		}
 	}
 	//@end
