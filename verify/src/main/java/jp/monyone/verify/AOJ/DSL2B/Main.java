@@ -44,14 +44,14 @@ public class Main {
 		final int q = sc.nextInt();
 
 		BIT bit = new BIT(n);
-		for(int tt = 0; tt < q; tt++) {
+		for(int tt = 0; tt < q; tt++){
 			final int op = sc.nextInt();
-			final int x = sc.nextInt() - 1;
-			final int y = sc.nextInt();
+			final int x  = sc.nextInt() - 1;
+			final int y  = sc.nextInt();
 
-			if (op == 0) {
+			if(op == 0){
 				bit.add(x, y);
-			} else {
+			}else{
 				System.out.println(bit.sum(x, y));
 			}
 		}
