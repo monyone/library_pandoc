@@ -7,7 +7,7 @@ program_offset='src/main/java/jp/monyone/verify/'
 program_dir="${verify_dir}/${program_offset}"
 sed_dir='..\/verify\/src\/main\/java\/jp\/monyone\/verify\/'
 
-for program in `find ${program_dir} -type f`; do
+for program in `find ${program_dir} -name '*.template' -and -type f`; do
   locate_name=`echo ${program} | sed "s/.template//g"`
 
   #echo ${program} ${locate_name}
