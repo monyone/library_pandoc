@@ -2,7 +2,7 @@
 $a^{\phi(m)} \: = \: 1 \: (mod \: m)$ となる $\phi(m)$ を計算する.
 
 ### 計算量 {#complecity .unnumbered}
-$O(m)$
+$O(\sqrt{m})$
 
 ### Source Code {.unnumbered}
 

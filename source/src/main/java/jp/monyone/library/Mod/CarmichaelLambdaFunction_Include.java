@@ -5,7 +5,7 @@ import static jp.monyone.library.Math.GCDLCM_Include.lcm;
 public class CarmichaelLambdaFunction_Include {
 	//@start
 	// λ(2^k) = 1 (k == 1), 2 (k == 2), 2^(k - 2) (k >= 3)
-	// λ(p^k) = p^(k-1) * (p - 1)
+	// λ(p^k) = p^(k-1) * (p - 1) ... (p=奇素数の時)
 	// λ(p1^k1...pn^kn) = lcm(λ(p1^k1), ... λ(pn^kn))
 	public static long carmichaelLambdaFunction(long n) {
 		long lambda = 1;
