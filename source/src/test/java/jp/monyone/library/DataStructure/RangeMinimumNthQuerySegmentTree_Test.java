@@ -10,6 +10,12 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class RangeMinimumNthQuerySegmentTree_Test {
+	// utility
+	private static RMNthQ prepare(long ... array){
+		RMNthQ nth = new RMNthQ(array.length);
+		nth.init(array);
+		return nth;
+	}
 
 	@Test public void test_compare_sorted_array(){
 		long[] array = new long[100];
@@ -17,8 +23,7 @@ public class RangeMinimumNthQuerySegmentTree_Test {
 			array[i] = i * i;
 		}
 
-		RMNthQ nth = new RMNthQ(array.length);
-		nth.init(array);
+		RMNthQ nth = prepare(array);
 
 		for(int begin = 0; begin < array.length; begin++){
 			for(int end = begin + 1; end <= array.length; end++){
@@ -37,8 +42,7 @@ public class RangeMinimumNthQuerySegmentTree_Test {
 			array[i] = rnd.nextLong() / 2; // nth の方の二分探索で死ぬから.
 		}
 
-		RMNthQ nth = new RMNthQ(array.length);
-		nth.init(array);
+		RMNthQ nth = prepare(array);
 
 		for(int begin = 0; begin < array.length; begin++){
 			for(int end = begin + 1; end <= array.length; end++){
@@ -53,22 +57,17 @@ public class RangeMinimumNthQuerySegmentTree_Test {
 		}
 	}
 
+	// K-th number
+	public static void POJ2014_Test(RMNthQ nth, int l, int r, int k, long answer){
+		assertThat(nth.query(l - 1, r, k), is(answer));
+	}
+
 	@Test public void POJ2104_Sample(){
-		// K-th number
-		long[] array = {1,5,2,6,3,7,4};
-		int[][] query ={ //l, r, kth, answer
-			{2, 5, 3, 5},
-			{4, 4, 1, 6},
-			{1, 7, 3, 3}
-		};
+		RMNthQ nth = prepare(new long[]{1,5,2,6,3,7,4});
 
-		RMNthQ nth = new RMNthQ(array.length);
-		nth.init(array);
-
-		for(final int[] q : query) {
-			// convert [] -> [)
-			assertThat(nth.query(q[0] - 1, q[1], q[2]), is((long)(q[3])));
-		}
+		POJ2014_Test(nth, 2, 5, 3, 5);
+		POJ2014_Test(nth, 4, 4, 1, 6);
+		POJ2014_Test(nth, 1, 7, 3, 3);
 	}
 }
 
