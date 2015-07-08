@@ -1,4 +1,4 @@
-package jp.monyone.verify.AOJ.0516;
+package jp.monyone.verify.AOJ.AOJ0516.BIT;
 
 import java.util.Scanner;
 
