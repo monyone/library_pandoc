@@ -1,4 +1,4 @@
-package jp.monyone.verify.AOJ;
+package jp.monyone.verify.AOJ.DSL2B;
 
 import java.util.Scanner;
 
@@ -17,12 +17,12 @@ public class Main {
 			final int op = sc.nextInt();
 			final int x  = sc.nextInt() - 1;
 			final int y  = sc.nextInt();
-		}
-		
-		if(op == 0){
-			bit.add(x, y);
-		}else{
-			System.out.println(bit.sum(x, y));
+
+			if(op == 0){
+				bit.add(x, y);
+			}else{
+				System.out.println(bit.sum(x, y));
+			}
 		}
 	}
 }
