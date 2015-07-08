@@ -1,4 +1,4 @@
-package jp.monyone.verify.AOJ.DSL2B;
+package jp.monyone.verify.AOJ.DSL2B.BIT;
 
 import java.util.Scanner;
 
