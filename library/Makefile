@@ -59,13 +59,17 @@ $(SECTION_TEX_FILES): $(CONTENT_TEX_FILES)
 derive-source:
 	./derive-source.sh
 
+# Generate Online Judge Code to Verify
+gen-verify:
+	./update-verify.sh
+
 # Fix external link to Internal Link in LaTeX format
 fix-inner-link: $(CONTENT_TEX_FILES)
 	for file in $(CONTENT_TEX_FILES) ; do \
 	  sed -i -e 's/\\href{\.\/library\.html\\#\([^\\}]*\)\}/\\hyperref\[\1\]/g' $$file; \
 	done	
 
-build: derive-source $(SECTION_TEX_FILES)
+build: gen-verify derive-source $(SECTION_TEX_FILES)
 	touch $(TARGET).tex
 
 
