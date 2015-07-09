@@ -34,7 +34,7 @@ public class RangeAddRangeMinimumQuerySegmentTree_Include {
 		// [a, b) の範囲での最小値を求める
 		public long min(long a, long b){ return min(a, b, 0, 0, this.n); }
 		private long min(long a, long b, int k, int l, int r){
-			if(r <= a || b <= l){ return INF; } //簡単のため適当に大きい値を返す.
+			if(r <= a || b <= l){ return INF; } // 簡単のため適当に大きい値を返す.
 			if(a <= l && r <= b){ return min[k]; } //
 
 			final long left_min  = min(a, b, k * 2 + 1, l, (l + r) / 2);

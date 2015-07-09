@@ -35,7 +35,7 @@ public class StarrySkyTree_Include {
 		// [a, b) の範囲での最大値を求める
 		public long max(long a, long b){ return max(a, b, 0, 0, this.n); }
 		private long max(long a, long b, int k, int l, int r){
-			if(r <= a || b <= l){ return M_INF; } //簡単のため適当に小さい値を返す.
+			if(r <= a || b <= l){ return M_INF; } // 簡単のため適当に小さい値を返す.
 			if(a <= l && r <= b){ return add[k]; } // 子孫のaddは 0 を選べる.
 
 			final long left_max  = max(a, b, k * 2 + 1, l, (l + r) / 2);
