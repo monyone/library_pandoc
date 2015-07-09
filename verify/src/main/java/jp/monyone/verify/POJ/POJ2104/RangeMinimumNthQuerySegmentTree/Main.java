@@ -1,18 +1,14 @@
 package jp.monyone.verify.POJ.POJ2104.RangeMinimumNthQuerySegmentTree;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
+import java.io.InputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 public class Main {
 
-	// 蟻本に出てきた, SegmentTreeと似た構造の, n番目の最小値を出すデータ構造.
-	// POJ2104 で Verify 出来てはいる. けど, 二分探索でLongの境界値 / 2 くらいのがあるとバグル.
-	// init -> O(n log n) , update(k, v) -> O(n) くらい? , query(a, b, nth) -> O(log^3 n)
+	// SegmentTree(っぽい) 構造で範囲内のn番目の最小値を求める.
 	public static class RMNthQ {
 		int n, depth;
 		long[][] segs;
@@ -35,7 +31,7 @@ public class Main {
 			}
 		}
 
-		public void init(long[] array){
+		public void init(long[] array){ // O( n log n)
 			System.arraycopy(array, 0, segs[depth - 1], 0, n);
 			for(int d = depth - 2, size = 2; d >= 0; d--, size *= 2){
 				for(int begin = 0; begin < this.n; begin += size){
@@ -47,7 +43,7 @@ public class Main {
 			}
 		}
 
-		public void update(int k, long a){
+		public void update(int k, long a){ // 多分 O(n)
 			segs[depth - 1][k] = a;
 			for(int d = depth - 2, size = 2; d >= 0; d--, size *= 2){
 				final int begin = (k / size) * size, middle = begin + size / 2;
@@ -67,7 +63,7 @@ public class Main {
 			return upper;
 		}
 
-		public int query(int a, int b, long v, int d, int l, int r){
+		public int query(int a, int b, long v, int d, int l, int r){ // O(log^2 n)
 			if(r <= a || b <= l){
 				return 0;
 			}else if(a <= l && r <= b){
@@ -79,7 +75,7 @@ public class Main {
 			}
 		}
 
-		public long query(int a, int b, int nth){
+		public long query(int a, int b, int nth){ // O(log^3 n)
 			int lower_index = -1, upper_index = this.n; //(l, u]
 			while(upper_index > lower_index + 1) {
 				final int middle_index = (lower_index + upper_index) / 2;
@@ -114,35 +110,37 @@ public class Main {
 				
 		sc.close();
 	}
-	// TODO: Template.Scanner
 	
 	public static class Scanner {
-	    private BufferedReader br;
-	    private StringTokenizer tok;
+		private BufferedReader br;
+		private StringTokenizer tok;
 
-	    public Scanner(InputStream is) throws IOException {
-	        br = new BufferedReader(new InputStreamReader(is));
-	    }
+		public Scanner(InputStream is) {
+			br = new BufferedReader(new InputStreamReader(is));
+		}
 
-	    private void getLine() throws IOException {
-	        while (!hasNext()) { tok = new StringTokenizer(br.readLine()); }
-	    }
+		private void getLine() {
+			try {
+				while (!hasNext()) {tok = new StringTokenizer(br.readLine());}
+			} catch(IOException e){ /* ignore */ }
+		}
 
-	    private boolean hasNext() {
-	        return tok != null && tok.hasMoreTokens();
-	    }
+		private boolean hasNext() {
+			return tok != null && tok.hasMoreTokens();
+		}
 
-	    public String next() throws IOException {
-	        getLine(); return tok.nextToken();
-	    }
+		public String next() {
+			getLine(); return tok.nextToken();
+		}
 
-	    public int nextInt() throws IOException {
-	        return Integer.parseInt(next());
-	    }
-	    // 他のnextXXXもXXX.parseXXX()メソッドを使って作れるので省略
-	    
-	    public void close() throws IOException {
-	        br.close();
-	    }
+		public int nextInt(){
+			return Integer.parseInt(next());
+		}
+		// 他のnextXXXもXXX.parseXXX()メソッドを使って作れるので省略
+
+		public void close() {
+			try{ br.close(); } catch (IOException e){ /*ignore*/ }
+		}
 	}
+	
 }

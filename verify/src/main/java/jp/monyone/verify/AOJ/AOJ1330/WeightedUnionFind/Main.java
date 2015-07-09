@@ -1,12 +1,10 @@
 package jp.monyone.verify.AOJ.AOJ1330.WeightedUnionFind;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
 
@@ -100,35 +98,37 @@ public class Main {
 		
 		sc.close();
 	}
-	// TODO: Template.Scanner
+	
 	
 	public static class Scanner {
-	    private BufferedReader br;
-	    private StringTokenizer tok;
+		private BufferedReader br;
+		private StringTokenizer tok;
 
-	    public Scanner(InputStream is) throws IOException {
-	        br = new BufferedReader(new InputStreamReader(is));
-	    }
+		public Scanner(InputStream is) {
+			br = new BufferedReader(new InputStreamReader(is));
+		}
 
-	    private void getLine() throws IOException {
-	        while (!hasNext()) { tok = new StringTokenizer(br.readLine()); }
-	    }
+		private void getLine() {
+			try {
+				while (!hasNext()) {tok = new StringTokenizer(br.readLine());}
+			} catch(IOException e){ /* ignore */ }
+		}
 
-	    private boolean hasNext() {
-	        return tok != null && tok.hasMoreTokens();
-	    }
+		private boolean hasNext() {
+			return tok != null && tok.hasMoreTokens();
+		}
 
-	    public String next() throws IOException {
-	        getLine(); return tok.nextToken();
-	    }
+		public String next() {
+			getLine(); return tok.nextToken();
+		}
 
-	    public int nextInt() throws IOException {
-	        return Integer.parseInt(next());
-	    }
-	    // 他のnextXXXもXXX.parseXXX()メソッドを使って作れるので省略
-	    
-	    public void close() throws IOException {
-	        br.close();
-	    }
+		public int nextInt(){
+			return Integer.parseInt(next());
+		}
+		// 他のnextXXXもXXX.parseXXX()メソッドを使って作れるので省略
+
+		public void close() {
+			try{ br.close(); } catch (IOException e){ /*ignore*/ }
+		}
 	}
 }
