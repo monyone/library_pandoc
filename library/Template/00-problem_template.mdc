@@ -25,35 +25,6 @@ public class Main {
 なので, 正規表現を使わないScannerを自作する必要がある.
 
 ### Source Code {.unnumbered}
-~~~~{.java}
-public static class Scanner {
-	private BufferedReader br;
-	private StringTokenizer tok;
-
-	public Scanner(InputStream is) throws IOException {
-		br = new BufferedReader(new InputStreamReader(is));
-	}
-
-	private void getLine() throws IOException {
-		while (!hasNext()) { tok = new StringTokenizer(br.readLine()); }
-	}
-
-	private boolean hasNext() {
-		return tok != null && tok.hasMoreTokens();
-	}
-
-	public String next() throws IOException {
-		getLine(); return tok.nextToken();
-	}
-
-	public int nextInt() throws IOException {
-		return Integer.parseInt(next());
-	}
-	// 他のnextXXXもXXX.parseXXX()メソッドを使って作れるので省略
-	
-	public void close() throws IOException {
-		br.close();
-	}
-}
+~~~~{Scanner.java}
 ~~~~
 
