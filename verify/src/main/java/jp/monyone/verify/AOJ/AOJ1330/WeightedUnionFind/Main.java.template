@@ -1,4 +1,4 @@
-package library.DataStructure.WeightedUnionFind;
+package jp.monyone.verify.AOJ.AOJ1330.WeightedUnionFind;
 
 import java.io.BufferedReader;
 import java.io.IOException;
