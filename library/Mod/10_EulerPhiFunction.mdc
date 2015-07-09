@@ -9,6 +9,21 @@ $O(\sqrt{m})$
 ~~~~{EulerPhiFunction.java}
 ~~~~
 
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+する予定
+
+\withoutTeXend
+
+## オイラーのφ関数(列挙) {#EnumEulerPhiFunction}
+1 〜 n までのオイラーのφ関数を列挙する.
+
+### 計算量 {.unnumbered}
+O(n)
+
+~~~~{EnumEulerPhiFunction.java}
+~~~~
 
 \withoutTeXbegin
 

@@ -1,4 +1,4 @@
-## 範囲加算RMQ {#RangeAddRangeMinimumQuery}
+## 範囲加算RMQ(SegmentTree) {#RangeAddRangeMinimumQuerySegmentTree}
 範囲加算をサポートした RMQ(Range Minimum Query) の実装.  
 範囲での加算と最小値の計算を効率的に行える.
 
