@@ -1,10 +1,10 @@
 package jp.monyone.verify.AOJ.AOJ1330.WeightedUnionFind;
 
-import java.util.StringTokenizer;
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 
