@@ -1,6 +1,6 @@
 package jp.monyone.library.DataStructure;
 
-public class RangeAddRangeMinimumQuery_Include {
+public class RangeAddRangeMinimumQuerySegmentTree_Include {
 	//@start
 	// 初期値は [0,n) = 0, 範囲minが手抜きなので,番兵(INF)が必要.
 	public static class RMQ {
