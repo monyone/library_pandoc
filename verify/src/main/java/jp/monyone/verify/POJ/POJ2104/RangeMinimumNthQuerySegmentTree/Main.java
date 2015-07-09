@@ -97,7 +97,7 @@ public class Main {
 		final int n = sc.nextInt();
 		final int m = sc.nextInt();
 		
-		long[] array = new int[n];
+		long[] array = new long[n];
 		for(int i = 0; i < n; i++){
 			array[i] = sc.nextInt();
 		}
@@ -109,7 +109,7 @@ public class Main {
 			final int r = sc.nextInt();
 			final int k = sc.nextInt();
 			
-			System.out.println(nth(l - 1, r, k));
+			System.out.println(nth.query(l - 1, r, k));
 		}
 				
 		sc.close();
