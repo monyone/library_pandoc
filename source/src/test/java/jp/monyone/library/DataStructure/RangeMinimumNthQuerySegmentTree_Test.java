@@ -39,7 +39,7 @@ public class RangeMinimumNthQuerySegmentTree_Test {
 		long[] array = new long[100];
 		Random rnd = new Random(0); // seed固定
 		for(int i = 0; i < array.length; i++){
-			array[i] = rnd.nextLong() / 2; // nth の方の二分探索で死ぬから.
+			array[i] = rnd.nextLong();
 		}
 
 		RMNthQ nth = prepare(array);
