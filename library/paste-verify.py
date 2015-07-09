@@ -100,7 +100,7 @@ for template_line in template_file:
     if first_line is True:
       first_line = False
       if 'package' not in template_line:
-        for import_line in import_lines:
+        for import_line in sorted(import_lines):
           dest_file.write(import_line + '\n')
       else:
         just_below_package = True
@@ -108,7 +108,7 @@ for template_line in template_file:
     elif just_below_package is True:
       just_below_package = False
       dest_file.write('\n')
-      for import_line in import_lines:
+      for import_line in sorted(import_lines):
         dest_file.write(import_line + '\n')
   
   template_matched = re.match(r'^[\s]*//[\s]*@paste[\s]*(.[\S]*)', template_line)
