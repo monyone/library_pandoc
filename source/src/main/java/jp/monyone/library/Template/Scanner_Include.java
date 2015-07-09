@@ -12,29 +12,31 @@ public class Scanner_Include {
 		private BufferedReader br;
 		private StringTokenizer tok;
 
-		public Scanner(InputStream is) throws IOException {
+		public Scanner(InputStream is) {
 			br = new BufferedReader(new InputStreamReader(is));
 		}
 
-		private void getLine() throws IOException {
-			while (!hasNext()) { tok = new StringTokenizer(br.readLine()); }
+		private void getLine() {
+			try {
+				while (!hasNext()) {tok = new StringTokenizer(br.readLine());}
+			} catch(IOException e){ /* ignore */ }
 		}
 
 		private boolean hasNext() {
 			return tok != null && tok.hasMoreTokens();
 		}
 
-		public String next() throws IOException {
+		public String next() {
 			getLine(); return tok.nextToken();
 		}
 
-		public int nextInt() throws IOException {
+		public int nextInt(){
 			return Integer.parseInt(next());
 		}
 		// 他のnextXXXもXXX.parseXXX()メソッドを使って作れるので省略
 
-		public void close() throws IOException {
-			br.close();
+		public void close() {
+			try{ br.close(); } catch (IOException e){ /*ignore*/ }
 		}
 	}
 	//@end
