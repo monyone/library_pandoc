@@ -49,7 +49,10 @@ TARGET = library
 
 # Target build rule for html format
 $(TARGET).html: $(TARGET).tex
-	pandoc -s --self-contained -r latex $< -t html5 --toc --toc-depth=2 -N -c $(TARGET).css --template=$(TARGET).template.html -H $(TARGET).include_in_header.html -o $@
+	pandoc -s -r latex $< -t html5 --toc --toc-depth=2 -N -c $(TARGET).css --template=$(TARGET).template.html -H $(TARGET).include_in_header.html -o $@ --mathjax
+
+$(TARGET)-sc.html: $(TARGET).tex
+	pandoc -s --self-contained -r latex $< -t html5 --toc --toc-depth=2 -N -c $(TARGET).css --template=$(TARGET).template.html -H $(TARGET).include_in_header.html -o $@ --mathml
 
 # Create Section page for subfolder
 $(SECTION_TEX_FILES): $(CONTENT_TEX_FILES)
@@ -76,6 +79,7 @@ build: gen-verify derive-source $(SECTION_TEX_FILES)
 pdf: build fix-inner-link $(TARGET).pdf
 
 html: tex-md-clean build $(TARGET).html
+html-sc: tex-md-clean build $(TARGET)-sc.html
 
 markdown: tex-md-clean build $(MD_FILES)
 	pandoc -s -r latex $(TARGET).tex -t markdown_github -o $(TARGET).md
@@ -91,4 +95,4 @@ clean: tex-md-clean
 	@rm -rf *.dvi *.toc *.aux *.log *.out */*.tex */*.md */*.java
 
 dist-clean: clean
-	@rm -rf $(TARGET).pdf $(TARGET).html $(TARGET).md index.html 
+	@rm -rf $(TARGET).pdf $(TARGET).html $(TARGET)-sc.html $(TARGET).md index.html
