@@ -1,0 +1,69 @@
+package jp.monyone.verify.POJ.POJ2104.RangeMinimumNthQuerySegmentTree;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Main {
+
+	//@paste DataStructure.RangeMinimumNthQuerySegmentTree
+	
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		final int n = sc.nextInt();
+		final int m = sc.nextInt();
+		
+		long[] array = new int[n];
+		for(int i = 0; i < n; i++){
+			array[i] = sc.nextInt();
+		}
+		RMNthQ nth = new RMNthQ(n);
+		nth.init(array);
+		
+		for(int i = 0; i < m; i++){
+			final int l = sc.nextInt();
+			final int r = sc.nextInt();
+			final int k = sc.nextInt();
+			
+			System.out.println(nth(l - 1, r, k));
+		}
+				
+		sc.close();
+	}
+	// TODO: Template.Scanner
+	
+	public static class Scanner {
+	    private BufferedReader br;
+	    private StringTokenizer tok;
+
+	    public Scanner(InputStream is) throws IOException {
+	        br = new BufferedReader(new InputStreamReader(is));
+	    }
+
+	    private void getLine() throws IOException {
+	        while (!hasNext()) { tok = new StringTokenizer(br.readLine()); }
+	    }
+
+	    private boolean hasNext() {
+	        return tok != null && tok.hasMoreTokens();
+	    }
+
+	    public String next() throws IOException {
+	        getLine(); return tok.nextToken();
+	    }
+
+	    public int nextInt() throws IOException {
+	        return Integer.parseInt(next());
+	    }
+	    // 他のnextXXXもXXX.parseXXX()メソッドを使って作れるので省略
+	    
+	    public void close() throws IOException {
+	        br.close();
+	    }
+	}
+}
