@@ -8,7 +8,7 @@ import static jp.monyone.library.DataStructure.RangeMinimumQuerySparseTable_Incl
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class RangeMinimumQuerySparseTree_Test {
+public class RangeMinimumQuerySparseTable_Test {
 
 	@Test public void one_element_test(){
 		long[] value = {114514};
