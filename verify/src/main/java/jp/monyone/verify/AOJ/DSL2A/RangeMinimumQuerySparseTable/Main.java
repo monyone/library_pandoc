@@ -9,7 +9,11 @@ import java.util.StringTokenizer;
 import java.util.Arrays;
 
 public class Main {
-	
+	/*
+	  TLEチェック用. updateにO(n)以上かかる事の確認のため.
+	  途中までは AC するので, Verifyにも一応なっている.
+	*/
+		
 	public static class RMQ {
 		long[][] sparse_table; // queryを O(1)にするなら, k をメモ化する事.
 
@@ -49,7 +53,7 @@ public class Main {
 			return Math.min(sparse_table[k][l], sparse_table[k][r - (1 << k)]);
 		}
 	}
-	
+		
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		

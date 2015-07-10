@@ -1,0 +1,39 @@
+package jp.monyone.verify.AOJ.DSL2A.RMQ;
+
+import java.util.Arrays;
+
+public class Main {
+	/*
+	  TLEチェック用. updateにO(n)以上かかる事の確認のため.
+	  しかし, この問題では高速化の恩恵で AC する.
+	  ふつうの Sparse Tree では TLE するので高速化の恩恵が確認できる.
+	*/
+		
+	//@paste DataStructure.RangeMinimumQuerySparseTableBitLookupTable
+		
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		final int n = sc.nextInt();
+		final int q = sc.nextInt();
+		
+		long[] array = new long[n];
+		Arrays.fill(array, Integer.MAX_VALUE);
+		
+		RMQ rmq = new RMQ(array);
+		for(int tt = 0; tt < q; tt++){
+			final int op = sc.nextInt();
+			final int x  = sc.nextInt();
+			final int y  = sc.nextInt();
+
+			if(op == 0){
+				rmq.update(x, y);
+			}else{
+				System.out.println(rmq.query(x, y + 1));
+			}
+		}
+	}
+	
+	//@paste Template.Scanner
+}
+
