@@ -2,7 +2,7 @@ package jp.monyone.library.DataStructure;
 
 import java.util.Random;
 
-public class LeftShiftMinHeapT {
+public class LeftshiftMinHeapT {
 	//@start
 	public static class LeftshiftHeap<T extends Comparable<? super T>> {
 
