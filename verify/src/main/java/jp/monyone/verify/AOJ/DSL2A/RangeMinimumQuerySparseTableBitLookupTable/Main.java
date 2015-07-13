@@ -1,4 +1,4 @@
-package jp.monyone.verify.AOJ.DSL2A.RMQ;
+package jp.monyone.verify.AOJ.DSL2A.RangeMinimumQuerySparseTableBitLookupTable;
 
 import java.io.BufferedReader;
 import java.io.IOException;
