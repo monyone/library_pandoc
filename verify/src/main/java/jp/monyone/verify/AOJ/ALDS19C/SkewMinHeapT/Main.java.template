@@ -1,0 +1,28 @@
+package jp.monyone.verify.AOJ.ALDS19C.SkewMinHeapT;
+
+import java.util.Arrays;
+
+public class Main {
+
+	//@paste DataStructure.SkewMinHeapT
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		SkewHeap<Integer> heap = new SkewHeap<Integer>();
+
+		while(true){
+			final String ops = sc.next();
+			if("end".equals(ops)){ break; }
+			
+			if("extract".equals(ops)){
+				System.out.println(-(heap.poll()));
+			}else{
+				heap.add(-sc.nextInt());
+			}
+		}
+	}
+		
+	//@paste Template.Scanner
+}
+
