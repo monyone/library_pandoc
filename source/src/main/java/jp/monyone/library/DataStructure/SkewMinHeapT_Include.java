@@ -9,14 +9,6 @@ public class SkewMinHeapT_Include {
 			T value; // value に null を入れると死ぬ.
 
 			public Node(T value){ this.value = value; }
-			public Node(Node<T> n){
-				this.left = n.left; this.right = n.right;
-				this.value = n.value;
-			}
-
-			public String toString(){ // これはデバッグ用なので削ってもいい.
-				return "[" + this.left + "] " + this.value + " [ " + this.right + " ]";
-			}
 		}
 
 		private static <T extends Comparable<? super T>> Node<T> meld(Node<T> a, Node<T> b){

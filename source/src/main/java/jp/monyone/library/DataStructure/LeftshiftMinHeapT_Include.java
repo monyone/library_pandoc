@@ -12,14 +12,6 @@ public class LeftshiftMinHeapT_Include {
 			int s;
 
 			public Node(T value){ this.value = value; this.s = 1; }
-			public Node(Node<T> n){
-				this.left = n.left; this.right = n.right;
-				this.value = n.value; this.s = n.s;
-			}
-
-			public String toString(){ // これはデバッグ用なので削ってもいい.
-				return "[" + this.left + "] " + this.value + " [ " + this.right + " ]";
-			}
 		}
 
 		private static <T extends Comparable<? super T>> Node<T> meld(Node<T> a, Node<T> b){
@@ -43,6 +35,7 @@ public class LeftshiftMinHeapT_Include {
 		// ユーティリティ
 		public T poll(){ T val = peek(); pop(); return val; }
 		public T peek(){ return root.value; }
+		public T top(){ return peek(); }
 		public boolean isEmpty(){ return root == null; }
 	}
 	//@end
