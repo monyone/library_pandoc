@@ -32,7 +32,7 @@ public class OfflineLCATarjan_Include {
 	//
 	public static int[] offlineLCA(int[] us, int[] vs, boolean[][] adj){
 		final int n = adj.length;
-		int[] lca_nodes = new int[n], ancestor = new int[n];
+		int[] lca_nodes = new int[us.length], ancestor = new int[n];
 		boolean[] visited = new boolean[n];
 		UnionFind uf = new UnionFind(n);
 
