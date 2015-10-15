@@ -24,7 +24,7 @@ public class OfflineLCATarjan_Include {
 			else if(vs[i] == node){ not_node = us[i]; }
 
 			if(not_node >= 0 && visited[not_node]){ // 両方とも評価済みかのチェック
-				lcas[i] = ancestor[i]; // 両方とも評価済みの場合は一度しかない.
+				lcas[i] = ancestor[uf.find(not_node)]; // 両方とも評価済みの場合は一度しかない.
 			}
 		}
 	}
