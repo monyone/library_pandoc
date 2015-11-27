@@ -3,7 +3,7 @@ package jp.monyone.library.DataStructure;
 public class StarrySkyTree_Include {
 	//@start
 	// JOI界隈で人気な, ちょっと特殊なRMQ(Range Maximum Query).
-	// 根が全体の最大値で, 子ノードのうちどちらかは 0 で, もう一方は 0 以下を満たす.
+	// 根は全体の最大値, 子ノードのうちどちらかは 0, もう一方は 0 以下を満たす.
 	public static class StarrySkyTree {
 		private static final long M_INF = Long.MIN_VALUE / 2 + 1;
 		private static final long DEFAULT = 0; // 単位元
