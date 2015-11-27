@@ -14,3 +14,9 @@
 
 \withoutTeXend
 
+
+## Misere Nim (山N個, 制限なし)
+勝利条件が Nim と逆なゲーム.
+
+Nim の数 に 1より大きいのがあれば, Nim の xor が 0 であると負ける.
+Nim の数 に 1以下しかなければ, Nim の xor が 1 であると負ける.
