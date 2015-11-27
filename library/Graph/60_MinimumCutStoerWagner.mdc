@@ -1,0 +1,13 @@
+## 全域最小カット {#MinimumCutStoerWagner}
+無向グラフ全体を2つに切る際の辺を切るコストの最小コストを求める. O(N^3)
+
+### Source Code {.unnumbered}
+~~~~{MinimumCutStoerWagner.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+
+\withoutTeXend
+
