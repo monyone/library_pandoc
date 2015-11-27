@@ -19,6 +19,7 @@ public class Dice_Include {
 			this(top, front, right, SIZE);
 		}
 
+		// rotate_from は (top | front) から見てどの方向に転がるを指定すると転がしてくれる.
 		public void rotate_from_top(final int dir) { rotate_dice(TOP, dir, BOTTOM, MAX - dir); }
 		public void rotate_from_front(final int dir){ rotate_dice(FRONT, dir, BACK, MAX - dir); }
 
