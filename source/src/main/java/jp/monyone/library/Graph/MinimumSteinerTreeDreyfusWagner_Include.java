@@ -39,7 +39,9 @@ public class MinimumSteinerTreeDreyfusWagner_Include {
 			}
 		}
 
-		return DP[(1 << m) - 1][ts[0]];
+		long ret = Long.MAX_VALUE;
+		for(final int t : ts){ ret = Math.min(ret, DP[(1 << m) - 1][t]); }
+		return ret;
 	}
 	//@end
 
