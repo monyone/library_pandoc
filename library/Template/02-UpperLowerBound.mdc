@@ -1,0 +1,19 @@
+
+## UpperBound
+java.util.Arrays.binarySearch() は重複がある場合にどれを指すかは未定義. 
+なので C++ の upper_bound() と似たようなものを独自定義する. 
+
+### Source Code {.unnumbered} 
+
+~~~~{UpperBoundArrayT.java}
+~~~~
+
+## LowerBound
+java.util.Arrays.binarySearch() は重複がある場合にどれを指すかは未定義. 
+なので C++ の lower_bound() と似たようなものを独自定義する. 
+
+### Source Code {.unnumbered}
+
+~~~~{LowerBoundArrayT.java}
+~~~~
+
