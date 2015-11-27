@@ -1,0 +1,16 @@
+## トポロジカルソート {#TopologicalSort}
+閉路検出は, DFSの探索で帰りがけ順に見れば良い.
+閉路がなければトポロジカルソートできる.
+
+### 計算量 {#complecity .unnumbered}
+
+### Source Code {.unnumbered}
+~~~~{TopologicalSort.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+
+\withoutTeXend
+

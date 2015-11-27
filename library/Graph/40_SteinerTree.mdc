@@ -1,0 +1,13 @@
+## 最小シュタイナー木 {#MinimumSteinerTree}
+最小シュタイナー木を求めるアルゴリズム. 
+
+### Source Code {.unnumbered}
+~~~~{MinimumSteinerTreeDreyfusWagner.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+
+\withoutTeXend
+

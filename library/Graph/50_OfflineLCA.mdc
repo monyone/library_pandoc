@@ -1,0 +1,13 @@
+## オフライン最小共通先祖 {#OfflineLCA}
+クエリに対してまとめて最小共通祖先を求める. 計算量はだいたい O(Ea(V)).
+
+### Source Code {.unnumbered}
+~~~~{OfflineLCATarjan.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+
+\withoutTeXend
+
