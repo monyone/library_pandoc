@@ -1,0 +1,19 @@
+## n番目の最小値(Waveletっぽい) {#RMNthQWave}
+区間の n番目 に小さい値を効率的に求めるデータ構造. 
+こちらは minクエリを O(log n) でできる.
+
+
+### 計算量 {#complecity .unnumbered}
++ min(s,t,n)   : O(log n) ※範囲[s,t)の番目の最小値
+
+### Source Code {.unnumbered}
+
+~~~~{RangeMinimumNthQuerySegmentTree.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+TODO
+
+\withoutTeXend

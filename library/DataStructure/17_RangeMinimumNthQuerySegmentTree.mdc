@@ -1,0 +1,19 @@
+## n番目の最小値(SegmentTree) {#RMNthQSegTree}
+区間の n番目 に小さい値を効率的に求めるデータ構造.
+SegmentTree に部分列を突っ込んで二分探索している.
+
+### 計算量 {#complecity .unnumbered}
++ update(k,v) : O(log n) ※単体への加算
++ min(s,t,n)   : O(log^3 n) ※範囲[s,t)のn番目の最小値
+
+### Source Code {.unnumbered}
+
+~~~~{RangeMinimumNthQuerySegmentTree.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+TODO
+
+\withoutTeXend

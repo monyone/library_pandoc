@@ -1,0 +1,19 @@
+## SparseTable(RMQ) {#SparseTable}
+最大値クエリをO(1)で処理するデータ構造. しかし, 構築や値の更新にO(n log n)かかる. 
+
+### 計算量 {#complecity .unnumbered}
++ update(k,v) : O(n log n) ※単体への加算
++ max(s,t)   : O(1) ※範囲[s,t)の最大値
+
+### Source Code {.unnumbered}
+
+~~~~{RangeMinimumQuerySparseTable.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
+TODO
+
+\withoutTeXend
+

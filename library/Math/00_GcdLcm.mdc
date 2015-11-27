@@ -15,3 +15,10 @@
 
 \withoutTeXend
 
+## nextPermutation
+順列に対して次の順列を返す. C++ にもある便利な関数.
+
+### Source Code {.unnumbered}
+
+~~~~{NextPermutation.java}
+~~~~
