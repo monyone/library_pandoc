@@ -13,7 +13,7 @@ public class Main {
 	/*
 	  TLEチェック用. updateにO(n)以上かかる事の確認のため.
 	  しかし, この問題では高速化の恩恵で AC する.
-	  ふつうの Sparse Tree では TLE するので高速化の恩恵が確認できる.
+	  ふつうの Sparse Table では TLE するので高速化の恩恵が確認できる.
 	*/
 		
 	public static class RMQ {
