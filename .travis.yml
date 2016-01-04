@@ -7,9 +7,15 @@ cache:
   directories:
   - ${HOME}/.m2
 
+env:
+  global:
+    secure: "Ad8DXc98vTKmSx8H8vACVYGucRv5o382/fIhYo5AB7cLFjYPrxWy2NGNjZz+4VHmENU/plmGBCyp7eoFq7PZagKECEugBexQusQx3sPxb5YXQS8ZxhiZySXX/QFLt6fJJFoxAb+btBoGlLa3X7G01YRA4UauQ+GeRFdrl7zzfc1FUsW3qF6bQlrgnA6LV1BOBjuDRyDdj0adM3sYn8IsfduTrA4rwiX+TaLhX61DH8/V3FLD0HQ7gnnmhiZyU3277Kb12YB8xH1XV+u5wYhIqqDJ2tJLRNhfQ6ruA47hRrcxfhCpM6SHxQcHIGBF315g4dsEyKuGlS3N2XxgCVx9U/WjJhO9OH0MmJstEej5xhOOGX2meRgfGxE0c/hSGfoufOzMvCa004Sxm5BhoU3ErFvOGy0CJlrBkf91XGHq2F4ZDocAm6Sg9cKqegUGvH8xj2UDDyirU0HzgfdJZvFvtyChs0x/HfaEG06bXYf6PKO0XFJ4z8yVP1KEWMbewrtzJRhLFKFOkwEHiUatB4rGcHDMeqzaHNnDWhLXuAE2zGhRozU8R7N5il32l6BrN43jVjOtG59vKdKzHbIOUJZFmuct+mJncA/JXB576GM0arJCaRxtR47emsDi/NILmWA760pUhrrMvjxocrxzu4DVBrzwOSxRpo2vKy11FQJmO6M="
 
 before_install:
   - cd source
 
 script: 
-  - mvn verify
+  - mvn jacoco:prepare-agent test
+
+after_success:
+  - mvn jacoco:report coveralls:report
