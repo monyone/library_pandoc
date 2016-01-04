@@ -1,6 +1,6 @@
 底辺ライブラリ(ビルド)
 ==============================
-[![Build Status](https://travis-ci.org/monyone/library_pandoc.svg?branch=master)](https://travis-ci.org/monyone/library_pandoc)
+source: [![Build Status](https://travis-ci.org/monyone/library_pandoc.svg?branch=master)](https://travis-ci.org/monyone/library_pandoc)
 
 これは何?
 ---------
@@ -11,12 +11,20 @@
 
 依存ソフトウェア
 ----------------
++ source
+  + Java (OracleJDK 8)
+  + maven2 (ビルド, テスト)
 
-+ pandoc
-+ python3
-+ LaTeX (platex, dvipdfmx, listings)
-+ make (LaTeX のタイプセット用)
-+ maven (ソースコードの一括テスト用)
++ verify
+  + Java (OracleJDK 8)
+  + maven2 (ビルド)
+  + python3 (貼り付け)
+
++ library
+  + pandoc
+  + python3 (切り抜き, 貼り付け用)
+  + LaTeX (platex, dvipdfmx, listings)
+  + make (LaTeX のタイプセット用)
 
 注意
 ----
