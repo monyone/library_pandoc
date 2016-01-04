@@ -1,6 +1,6 @@
 底辺ライブラリ(ビルド)
 ==============================
-source: [![Build Status](https://travis-ci.org/monyone/library_pandoc.svg?branch=master)](https://travis-ci.org/monyone/library_pandoc)
+source: [![Build Status](https://travis-ci.org/monyone/library_pandoc.svg?branch=master)](https://travis-ci.org/monyone/library_pandoc) [![Coverage Status](https://coveralls.io/repos/monyone/library_pandoc/badge.svg?branch=master&service=github)](https://coveralls.io/github/monyone/library_pandoc?branch=master)
 
 これは何?
 ---------
