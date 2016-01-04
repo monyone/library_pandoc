@@ -1,5 +1,6 @@
 底辺ライブラリ(ビルド)
 ==============================
+[![Build Status](https://travis-ci.org/monyone/library_pandoc.svg?branch=master)](https://travis-ci.org/monyone/library_pandoc)
 
 これは何?
 ---------
