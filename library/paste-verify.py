@@ -69,7 +69,7 @@ def write_paste_code(indent, paste_path, dest_file):
   paste_file_paths.add(paste_path)
   #print(paste_path)
   
-  with open(paste_path, 'r'. encoding='utf-8') as paste_file:
+  with open(paste_path, 'r', encoding='utf-8') as paste_file:
     write_flg = False
     for paste_line in paste_file:
       import_static_matched = re.match(r'^[\s]*import[\s]+static[\s]*([\S]*)', paste_line)
