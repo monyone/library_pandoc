@@ -1,0 +1,17 @@
+box: id: ubuntu/trusty
+
+build:
+    steps:
+    - script:
+        name: Update apt
+        code: |
+          sudo apt-get update
+    - script:
+        name: Install latex CJK
+        code: |
+          sudo apt-get install -y latex-cjk-all
+      - script:
+            name: compile pdf
+            code: |
+                cd library
+                make pdf
