@@ -1,4 +1,4 @@
-box: ubuntu/trusty
+box: wercker/ubuntu
 
 build:
     steps:
