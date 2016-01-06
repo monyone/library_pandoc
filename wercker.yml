@@ -1,4 +1,5 @@
-box: id: ubuntu/trusty
+box: 
+    id: ubuntu/trusty
 
 build:
     steps:
