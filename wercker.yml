@@ -5,7 +5,7 @@ build:
     - script:
         name: Update apt
         code: |
-            sudo apt-get update
+            sudo apt-get update && sudo apt-get upgrade
     - script:
         name: Set LANG
         code: |
