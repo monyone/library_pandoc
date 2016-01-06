@@ -10,8 +10,9 @@ build:
         name: Install latex CJK
         code: |
             sudo apt-get install -y latex-cjk-all
-    - sciprt:
+    - script:
         name: Install make
+        code: |
             sudo apt-get install -y make
     - script:
         name: compile pdf
