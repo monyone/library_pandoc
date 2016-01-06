@@ -1,4 +1,4 @@
-box: wercker/ubuntu
+box: ubuntu:14.04
 
 build:
     steps:
