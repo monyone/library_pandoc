@@ -11,18 +11,24 @@ import org.junit.Test;
 
 public class EulerPhiFunction_Test {
 
-	@Test public void check_euler_theorem_satisfied(){
-		for(long mod = 2; mod < 1000; mod++) {
-			for (long a = 2; a < mod; a++) {
-				final long gcd = gcd(a, mod);
-				if(gcd != 1){ continue; } // 互いに素である事が条件なので除外.
+	// 上限(bound)の範囲内で互いに素な a, n (a < n) に対して a^phi(n) = 1 (mod n) が成り立つかテスト
+	public void bounded_exhaustive_testing_for_euler_theorem(final int bound){
+		for(long n = 2; n <= bound; n++){
+			for(long a = 2; a < n; a++){
+				final long gcd = gcd(a, n);
+				// オイラーの定理は互いに素である事が必要条件なので除外.
+				if(gcd != 1){ continue; }
 
-				final long phi = eulerPhiFunction(mod);
-				final long mod_pow = mod_pow(a, phi, mod);
+				final long applied_mod = mod_pow(a, eulerPhiFunction(n), n);
 
-				assertThat(mod_pow, is(1L)); // a^phi(m) = 1 (m) をチェック
+				assertThat(applied_mod, is(1L)); // 定理通りに a^phi(n) = 1 (mod n) が成り立つか
 			}
 		}
+	}
+
+	@Test public void check_euler_theorem_satisfied_use_BET(){
+		// 計算量の観点から 1000 までの互いに素な値をしらみつぶしにする
+		bounded_exhaustive_testing_for_euler_theorem(1000);
 	}
 }
 
