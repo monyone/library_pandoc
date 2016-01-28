@@ -31,7 +31,7 @@ def recursive_import_collecting(source_path, visit_paths):
   if source_path in visit_paths:
     return
   
-  with open(source_path, 'r', encoding='utf-8') as source_file:
+  with open(source_path, 'r') as source_file:
     visit_paths.add(source_path)
     
     for source_line in source_file:
@@ -50,7 +50,7 @@ def recursive_import_collecting(source_path, visit_paths):
     visit_paths.remove(source_path)
 
 def collect_nested_import(path):
-  with open(path, 'r', encoding='utf-8') as file:
+  with open(path, 'r') as file:
     for line in file:
       matched = re.match(r'^[\s]*//[\s]*@paste[\s]*(.[\S]*)', line)
       if matched is not None:
@@ -69,7 +69,7 @@ def write_paste_code(indent, paste_path, dest_file):
   paste_file_paths.add(paste_path)
   #print(paste_path)
   
-  with open(paste_path, 'r', encoding='utf-8') as paste_file:
+  with open(paste_path, 'r') as paste_file:
     write_flg = False
     for paste_line in paste_file:
       import_static_matched = re.match(r'^[\s]*import[\s]+static[\s]*([\S]*)', paste_line)
