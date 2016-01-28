@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class Scanner_Include {
 	//@start
-	public static class Scanner {
+	public static class Scanner implements AutoCloseable {
 		private BufferedReader br;
 		private StringTokenizer tok;
 
