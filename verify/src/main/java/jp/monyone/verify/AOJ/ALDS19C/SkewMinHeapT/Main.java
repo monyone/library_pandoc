@@ -56,7 +56,7 @@ public class Main {
 		}
 	}
 		
-	public static class Scanner {
+	public static class Scanner implements AutoCloseable {
 		private BufferedReader br;
 		private StringTokenizer tok;
 
