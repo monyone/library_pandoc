@@ -2,7 +2,7 @@ package jp.monyone.library.Mod;
 
 import static jp.monyone.library.Mod.InvModM_Include.mod_inv;
 
-public class ChiniseRemainder_Include {
+public class ChineseRemainder_Include {
 	//@start
 	public static long chinese_remainder(long[] as, long[] ms){
 		long prod = 1;
