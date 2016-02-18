@@ -9,7 +9,7 @@ $O(条件の数 * log \; \sum \; m_i)$ ※計算量よりオーバーフロー�
 
 ### Source Code {.unnumbered}
 
-~~~~{ChiniseRemainder.java}
+~~~~{ChineseRemainder.java}
 ~~~~
 
 \withoutTeXbegin
