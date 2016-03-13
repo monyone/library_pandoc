@@ -283,7 +283,7 @@ border: none; }
 
 #TOC {
 float: left;
-width: 300px; /* サイドバーの幅 */
+width: 280px; /* サイドバーの幅 */
 background-color: #e6e6fa;
 color: #000080;
 margin:0px;
@@ -304,7 +304,7 @@ padding: 0px;
 
 
 #CONTENT {
-margin-left: 300px; /* メインカラムの左マージン（サイドバーの幅以上） */
+margin-left: 280px; /* メインカラムの左マージン（サイドバーの幅以上） */
 margin-top: 0px;
 padding: 1px;
 padding-left: 30px;
@@ -313,8 +313,12 @@ padding-right: 15px;
 background-color: #f8f8ff;
 }
 
-@media (max-width: 850px){
-  #CONTENT{
+/* レスポンシブ対応 */
+
+@media screen and (max-width : 800px){
+  pre code { font-size : 12pt}
+  
+  #CONTENT {
     width: 100%;
     margin-left: 0px;
   }
@@ -323,5 +327,13 @@ background-color: #f8f8ff;
     width: 0px;
   }
 }
-
+@media screen and (min-width : 800px) and (max-width : 1024px){
+  pre code { font-size : 11pt; }
+}
+@media screen and (min-width : 1024px) and (max-width : 1200px){
+  pre code { font-size : 12pt; }
+}
+@media screen and (min-width : 1200px){
+  pre code { font-size : 14pt; }
+}
 
