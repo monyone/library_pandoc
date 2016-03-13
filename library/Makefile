@@ -48,10 +48,10 @@ TEX_FILES = $(SECTION_TEX_FILES) $(CONTENT_TEX_FILES)
 TARGET = library
 
 # Target build rule for html format
-$(TARGET).html: $(TARGET).tex
+$(TARGET).html: $(TARGET)-for-html.tex
 	pandoc -s -r latex $< -t html5 --toc --toc-depth=2 -N -c $(TARGET).css --template=$(TARGET).template.html -H $(TARGET).include_in_header.html -o $@ --mathjax
 
-$(TARGET)-sc.html: $(TARGET).tex
+$(TARGET)-sc.html: $(TARGET)-for-html.tex
 	pandoc -s --self-contained -r latex $< -t html5 --toc --toc-depth=2 -N -c $(TARGET).css --template=$(TARGET).template.html -H $(TARGET).include_in_header.html -o $@ --mathml
 
 # Create Section page for subfolder
@@ -72,14 +72,18 @@ fix-inner-link: $(CONTENT_TEX_FILES)
 	  sed -i -e 's/\\href{\.\/library\.html\\#\([^\\}]*\)\}/\\hyperref\[\1\]/g' $$file; \
 	done	
 
+fix-selfcontained-link: $(CONTENT_TEX_FILES)
+	for file in $(CONTENT_TEX_FILES) ; do \
+	  sed -i -e 's/\\href{\.\/library\.html\\#\([^\\}]*\)\}/\\href{\.\/library-sc\.html\\#\1\}/g' $$file; \
+	done
+
 build: gen-verify derive-source $(SECTION_TEX_FILES)
 	touch $(TARGET).tex
 
-
-pdf: build fix-inner-link $(TARGET).pdf
+pdf: tex-md-clean build fix-inner-link $(TARGET).pdf
 
 html: tex-md-clean build $(TARGET).html
-html-sc: tex-md-clean build $(TARGET)-sc.html
+html-sc: tex-md-clean build fix-selfcontained-link $(TARGET)-sc.html
 
 markdown: tex-md-clean build $(MD_FILES)
 	pandoc -s -r latex $(TARGET).tex -t markdown_github -o $(TARGET).md
