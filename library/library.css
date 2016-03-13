@@ -1,15 +1,10 @@
 body {
-font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
-//font-family: Helvetica, arial, sans-serif;
-font-size: 14px;
+font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+font-size: 16px;
 line-height: 1.6;
-//padding-top: 10px;
-//padding-bottom: 10px;
 background-color: white;
 margin: 0em;
 padding: 1px;
-//overflow: hidden;
-//padding: 30px;
 }
  
 body > *:first-child {
@@ -262,13 +257,13 @@ padding: 0;
 white-space: pre;
 border: none;
 background: transparent;
-font-family: Consolas, Inconsolata, "MS Gothic", "MS ゴシック", Meiryo, 'メイリオ', sans-serif;
+font-family: Ricty, "Ricty Diminished", Meiryo, "MS Gothic", sans-serif;
 }
  
 .highlight pre {
 background-color: #f8f8f8;
 border: 1px solid #cccccc;
-font-size: 13px;
+font-size: 14px;
 line-height: 19px;
 overflow: auto;
 padding: 6px 10px;
@@ -277,7 +272,7 @@ border-radius: 3px; }
 pre {
 background-color: #f8f8f8;
 border: 1px solid #cccccc;
-font-size: 13px;
+font-size: 14px;
 line-height: 19px;
 overflow: auto;
 padding: 6px 10px;
@@ -288,33 +283,28 @@ border: none; }
 
 #TOC {
 float: left;
-width: 280px; /* サイドバーの幅 */
+width: 300px; /* サイドバーの幅 */
 background-color: #e6e6fa;
 color: #000080;
 margin:0px;
 padding: 1px;
 padding-bottom: 10px;
-//height: auto !important;
-//height: 100%;
-//min-height: 100%;
 }
 nav a {
   color: #000080;
   text-decoration: none;
 }
-ul, li {margin-top:0.3em; margin-bottom:0.3em;}
+ul, li {margin-top:0.1em; margin-bottom:0.1em;}
 
 #TOC_WARP{
-//float: left;
-//position: relative;
 width: 280px;
 margin: 0px;
-padding: 1px;
+padding: 0px;
 }
 
 
 #CONTENT {
-margin-left: 280px; /* メインカラムの左マージン（サイドバーの幅以上） */
+margin-left: 300px; /* メインカラムの左マージン（サイドバーの幅以上） */
 margin-top: 0px;
 padding: 1px;
 padding-left: 30px;
@@ -330,9 +320,8 @@ background-color: #f8f8ff;
   }
   #TOC{
     display: none;
-
-		width: 0px;
-	}
+    width: 0px;
+  }
 }
 
 
