@@ -28,13 +28,11 @@ public class ChineseRemainder_Garner_Include {
 			vs[i] = (sums[i] * invs[i]) % ms[i];
 		}
 
-		// MOD を取る前に 0 かどうかを知る場合, ここで ∀i.(vs[i] == 0) チェック
-
 		long ret = 0;
 		for(int i = 0; i < ms.length; i++){
 			long mult = 1;
-			for(int j = 0; j < i; j++){ mult *= ms[j]; }// ここで MOD
-			ret += vs[i] * mult;// ここで MOD
+			for(int j = 0; j < i; j++){ mult *= ms[j]; }
+			ret += vs[i] * mult;
 		}
 
 		return ret;

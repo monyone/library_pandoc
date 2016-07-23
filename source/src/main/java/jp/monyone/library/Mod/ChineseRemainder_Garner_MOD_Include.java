@@ -45,10 +45,10 @@ public class ChineseRemainder_Garner_MOD_Include {
 		for(int i = 0; i < ms.length; i++){
 			long mult = 1;
 			for(int j = 0; j < i; j++){
-				mult *= ms[j]; mult %= MOD;
+				mult *= ms[j]; mult %= MOD; // ここも MOD
 			}
 
-			ret += (vs[i] * mult) % MOD; ret %= MOD;
+			ret += (vs[i] * mult) % MOD; ret %= MOD; // ここも MOD
 		}
 
 		return ret;
