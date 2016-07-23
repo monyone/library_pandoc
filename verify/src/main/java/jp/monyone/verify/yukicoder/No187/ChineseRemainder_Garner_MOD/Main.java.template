@@ -1,0 +1,83 @@
+package jp.monyone.verify.POJ.POJ2104.RangeMinimumNthQuerySegmentTree;
+
+public class Main {
+
+	//@paste Math.GCD_LCM
+
+	public static boolean make_so(long[] as, long[] ms){
+    	while(true) {
+    		boolean updated = false;
+
+       		for (int fst = 0; fst < ms.length; fst++) {
+   				for (int snd = fst + 1; snd < ms.length; snd++) {
+   					long gcd = gcd(ms[fst], ms[snd]);
+   					if (gcd == 1) {
+   						continue;
+   					}
+
+    				updated = true;
+
+    				if (as[fst] % gcd != as[snd] % gcd) {
+    					return false;
+    				}
+
+    				ms[fst] /= gcd;
+    				ms[snd] /= gcd;
+    				while (true) {
+    					long gt = gcd(ms[fst], gcd);
+    					if (gt == 1) {
+    						break;
+    					}
+
+    					ms[fst] *= gt;
+    					gcd /= gt;
+    				}
+    				ms[snd] *= gcd;
+    				as[fst] %= ms[fst];
+    				as[snd] %= ms[snd];
+    			}
+    		}
+
+    		if(!updated){
+    			break;
+    		}
+    	}
+
+    	return true;
+    }
+
+    //@paste Mod.ChineseRemainder_Garner_MOD
+
+	public static void main(String[] args) throws IOException {
+		try (Scanner sc = new Scanner(System.in)) {
+        	final int N = sc.nextInt();
+        		long[] as = new long[N];
+        		long[] ms = new long[N];
+        		for (int i = 0; i < N; i++){
+        			as[i] = sc.nextLong();
+        			ms[i] = sc.nextLong();
+        		}
+
+        		final long MOD = 1000000007L;
+
+        		final boolean so = make_so(as, ms);
+        		if(!so){
+        			System.out.println(-1);
+        			return;
+        		}
+
+        		long prod = 1;
+        		for(final long p : ms){
+        			prod *= p;
+        			prod %= 1000000007;
+        		}
+
+        		final long ret = chinese_remainder(as, ms, MOD);
+        		System.out.println(ret == 0 ? );
+        	}
+        }
+	}
+	
+	//@paste Template.Scanner
+	
+}

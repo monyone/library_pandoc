@@ -4,6 +4,7 @@ import static jp.monyone.library.Mod.InvModM_Include.mod_inv;
 
 public class ChineseRemainder_Include {
 	//@start
+	//Gauss の方法で求める. 返り値の値の mod を取らないので O(N) くらい
 	public static long chinese_remainder(long[] as, long[] ms){
 		long prod = 1;
 		for(long m : ms){ prod *= m; }
