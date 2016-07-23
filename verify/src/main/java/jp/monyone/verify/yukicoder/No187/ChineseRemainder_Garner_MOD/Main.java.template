@@ -3,40 +3,8 @@ package jp.monyone.verify.yukicoder.No187.ChineseRemainder_Garner_MOD;
 public class Main {
 
 	//@paste Math.GCDLCM
-
-	public static boolean make_so(long[] as, long[] ms){
-		while(true) {
-			boolean updated = false;
-			
-			for (int fst = 0; fst < ms.length; fst++) {
-				for (int snd = fst + 1; snd < ms.length; snd++) {
-					long gcd = gcd(ms[fst], ms[snd]);
-					if (gcd == 1) { continue; }
-					
-    					updated = true;
-					
-					if (as[fst] % gcd != as[snd] % gcd) { return false; }
-					
-					ms[fst] /= gcd;
-					ms[snd] /= gcd;
-    					while (true) {
-						long gt = gcd(ms[fst], gcd);
-						if (gt == 1) { break; }
 	
-						ms[fst] *= gt;
-						gcd /= gt;
-					}
-					ms[snd] *= gcd;
-					as[fst] %= ms[fst];
-					as[snd] %= ms[snd];
-				}
-			}
-		
-			if(!updated){ break; }
-		}
-			
-		return true;
-	}
+	//@paste Mod.ChineseRemainder_CoPrimeSequence
 
  	//@paste Mod.ChineseRemainder_Garner_MOD
 
@@ -52,8 +20,8 @@ public class Main {
 
         		final long MOD = 1000000007L;
 
-        		final boolean so = make_so(as, ms);
-        		if(!so){
+        		final boolean is_coprime = make_coprime_sequence(as, ms);
+        		if(!is_coprime){
         			System.out.println(-1);
         			return;
         		}else{ // すべての as が 0 mod ms の場合は 0 が答えになるが問題に合うように正整数にする

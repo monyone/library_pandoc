@@ -14,26 +14,27 @@ public class Main {
 	public static long lcm(long a, long b){
 		return a / gcd(a, b) * b;
 	}
-
-	public static boolean make_so(long[] as, long[] ms){
+	
+	// O(N^2) より上で適当な、中国剰余定理で互いに素にする関数
+	public static boolean make_coprime_sequence(long[] as, long[] ms){
 		while(true) {
 			boolean updated = false;
-			
+
 			for (int fst = 0; fst < ms.length; fst++) {
 				for (int snd = fst + 1; snd < ms.length; snd++) {
 					long gcd = gcd(ms[fst], ms[snd]);
 					if (gcd == 1) { continue; }
-					
-    					updated = true;
-					
+
+					updated = true;
+
 					if (as[fst] % gcd != as[snd] % gcd) { return false; }
-					
+
 					ms[fst] /= gcd;
 					ms[snd] /= gcd;
-    					while (true) {
+					while (true) {
 						long gt = gcd(ms[fst], gcd);
 						if (gt == 1) { break; }
-	
+
 						ms[fst] *= gt;
 						gcd /= gt;
 					}
@@ -42,10 +43,10 @@ public class Main {
 					as[snd] %= ms[snd];
 				}
 			}
-		
+
 			if(!updated){ break; }
 		}
-			
+
 		return true;
 	}
 
@@ -106,10 +107,10 @@ public class Main {
 		for(int i = 0; i < ms.length; i++){
 			long mult = 1;
 			for(int j = 0; j < i; j++){
-				mult *= ms[j]; mult %= MOD;
+				mult *= ms[j]; mult %= MOD; // ここも MOD
 			}
 
-			ret += (vs[i] * mult) % MOD; ret %= MOD;
+			ret += (vs[i] * mult) % MOD; ret %= MOD; // ここも MOD
 		}
 
 		return ret;
@@ -127,8 +128,8 @@ public class Main {
 
         		final long MOD = 1000000007L;
 
-        		final boolean so = make_so(as, ms);
-        		if(!so){
+        		final boolean is_coprime = make_coprime_sequence(as, ms);
+        		if(!is_coprime){
         			System.out.println(-1);
         			return;
         		}else{ // すべての as が 0 mod ms の場合は 0 が答えになるが問題に合うように正整数にする
