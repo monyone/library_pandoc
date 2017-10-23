@@ -1,4 +1,4 @@
-package jp.monyone.verify.AOJ.DSL2B.BIT;
+package jp.monyone.verify.AOJ.GRL2B.Chun_Liu_Edmonds;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -129,8 +129,8 @@ public class Main {
 		final int E = sc.nextInt();
 		final int S = sc.nextInt();		
 		
-		ArrayList<HashMap<Integer, Long>> fwd_adj = new ArrayList<HashMap<Integer, Long>>();
-		ArrayList<HashMap<Integer, Long>> rev_adj = new ArrayList<HashMap<Integer, Long>>();
+		ArrayList<Map<Integer, Long>> fwd_adj = new ArrayList<Map<Integer, Long>>();
+		ArrayList<Map<Integer, Long>> rev_adj = new ArrayList<Map<Integer, Long>>();
 		for (int i = 0; i < V; i++) {
 			fwd_adj.add(new HashMap<Integer, Long>());
 		}

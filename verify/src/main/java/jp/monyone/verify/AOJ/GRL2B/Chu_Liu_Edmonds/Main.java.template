@@ -1,4 +1,4 @@
-package jp.monyone.verify.AOJ.DSL2B.BIT;
+package jp.monyone.verify.AOJ.GRL2B.Chun_Liu_Edmonds;
 
 import java.util.Scanner;
 
