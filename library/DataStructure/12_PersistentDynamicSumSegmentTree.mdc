@@ -1,4 +1,4 @@
-## 動的永続SegmentTree(総和) {#PersistentDynamicSumSegmentTree}
+## 動的永続SegmentTree (単一加算と総和) {#PersistentDynamicSumSegmentTree}
 Indexの範囲が広く, updateが密ではない場合, 動的SegTreeも検討すべき.  
 (クエリ先読みができる場合は, 座標圧縮するだけで済む. 要検討.)
 
