@@ -315,7 +315,7 @@ background-color: #f8f8ff;
 
 /* レスポンシブ対応 */
 
-@media screen and (max-width : 1000px){
+@media screen and (max-width : 1080px){
   pre code { font-size : 12pt}
   
   #CONTENT {
