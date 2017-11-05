@@ -4,24 +4,32 @@ source: [![Build Status](https://travis-ci.org/monyone/library_pandoc.svg?branch
 
 これは何?
 ---------
-
 競技プログラミングで使っているコード(Java)のビルド/テスト/タイプセット環境.
 
 どんな底辺でも使えて, CI出来るライブラリを目指しています.
 
+Web版について
+------------
+ここでビルドしたのを teihen_library の gh-pages に張り付ける事にしました。 
+(なので teihen_library の方はもう gh-pages 以外は更新しません。)
+
+PDF版について
+------------
+どうやって配布などをしたらいいんだろうか?
+
 依存ソフトウェア
 ----------------
-+ source
-  + Java (OracleJDK 8)
++ source (ソースのビルド、簡単なテスト用)
+  + Java (OracleJDK 8)
   + maven2 (ビルド, テスト)
 
-+ verify
-  + Java (OracleJDK 8)
++ verify (実際に問題に張り付けられる体裁で管理する)
+  + Java (OracleJDK 8)
   + maven2 (ビルド)
   + python3 (貼り付け)
 
-+ library
-  + pandoc
++ library (pdf 版 と html 版 のタイプセット)
+  + pandoc
   + python3 (切り抜き, 貼り付け用)
   + LaTeX (platex, dvipdfmx, listings)
   + make (LaTeX のタイプセット用)
