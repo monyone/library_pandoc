@@ -49,7 +49,7 @@ font-size: inherit; }
  
 h3 tt, h3 code {
 font-size: inherit; }
- 
+W 
 h4 tt, h4 code {
 font-size: inherit; }
  
@@ -283,7 +283,7 @@ border: none; }
 
 #TOC {
 float: left;
-width: 280px; /* サイドバーの幅 */
+width: 400px; /* サイドバーの幅 */
 background-color: #e6e6fa;
 color: #000080;
 margin:0px;
@@ -297,14 +297,14 @@ nav a {
 ul, li {margin-top:0.1em; margin-bottom:0.1em;}
 
 #TOC_WARP{
-width: 280px;
+width: 400px;
 margin: 0px;
 padding: 0px;
 }
 
 
 #CONTENT {
-margin-left: 280px; /* メインカラムの左マージン（サイドバーの幅以上） */
+margin-left: 400px; /* メインカラムの左マージン（サイドバーの幅以上） */
 margin-top: 0px;
 padding: 1px;
 padding-left: 30px;
@@ -315,7 +315,7 @@ background-color: #f8f8ff;
 
 /* レスポンシブ対応 */
 
-@media screen and (max-width : 800px){
+@media screen and (max-width : 1000px){
   pre code { font-size : 12pt}
   
   #CONTENT {
@@ -327,6 +327,7 @@ background-color: #f8f8ff;
     width: 0px;
   }
 }
+/* 今のところ要らない感が
 @media screen and (min-width : 800px) and (max-width : 1024px){
   pre code { font-size : 11pt; }
 }
@@ -336,4 +337,4 @@ background-color: #f8f8ff;
 @media screen and (min-width : 1200px){
   pre code { font-size : 14pt; }
 }
-
+*/
