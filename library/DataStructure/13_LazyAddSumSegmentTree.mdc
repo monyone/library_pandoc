@@ -1,6 +1,6 @@
 ## 遅延評価 SegmentTree (区間加算と総和) {#LasyAddSumSegmentTree}
-SegmentTreeでは区間に対する add に $O(n \; log\; n)$ かかってしまう.  
-add のクエリを遅延評価することで 区間add を $O(log\; n)$ に抑える.
+SegmentTreeでは区間に対する add に O(n log n) かかってしまう.  
+add のクエリを遅延評価することで 区間add を O(log n) に抑える.
 
 ### 計算量 {#complecity .unnumbered}
 + add(v,s,t): O(log n) ※範囲の値の加算
