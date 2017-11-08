@@ -1,14 +1,15 @@
 package jp.monyone.library.Graph;
 
-import static jp.monyone.library.Template.IntINF_Include.INF;
+import static jp.monyone.library.Template.LongINF_Include.INF;
 
-public class MaximumMatchingDP_Include {
-	// n x n のグラフの最大マッチング(重み最小) を求める
+public class MinimumGeneralMatchingDP_Include {
+	// n x n のグラフの最大マッチング(重み最小) を DP で求める
+	// 計算量 O(n^2 * n)
 	//@start
-	public static int solve_DP(int[][] adj){
+	public static long MinimumGeneralMatching(long[][] adj){
 		final int n = adj.length;
 
-		int[] DP = new int[1 << n];
+		long[] DP = new long[1 << n];
 		final int INF = Integer.MAX_VALUE / 2 - 1;
 
 		for(int i = 0; i < 1 << n; i++){ DP[i] = INF; }

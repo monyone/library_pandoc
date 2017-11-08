@@ -1,14 +1,14 @@
-package jp.monyone.verify.yukicoder.No519.MaximumMatchingDP;
+package jp.monyone.verify.yukicoder.No519.MinimumGeneralMatchingDP;
 
 public class Main {
 
- 	//@paste Graph.MaximumMatchingDP
+ 	//@paste Graph.MinimumGeneralMatchingDP
 
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
 			final int n = sc.nextInt();
 			
-			final int max = 1000;
+			final long max = 1000;
 			long[][] adj = new long[n][n];
 			for(int i = 0; i < n; i++){
 				for(int j = 0; j < n; j++){
@@ -16,7 +16,7 @@ public class Main {
 				}
 			}
 		
-			final int solve = MaximumGeneralMatchingDP(adj);
+			final long solve = MinimumGeneralMatching(adj);
 			System.out.println(max * (n / 2) - solve);
 		}
 	}
