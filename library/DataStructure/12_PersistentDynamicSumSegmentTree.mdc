@@ -5,7 +5,7 @@ Indexの範囲が広く, updateが密ではない場合, 動的SegTreeも検討�
 
 ### 計算量 {#complecity .unnumbered}
 + update(k)  : O(log n) ※単一の値の更新
-+ query(s,t): O(log n) ※範囲[s,t)の和の計算
++ query(s,t): O(log n) ※区間[s,t)の和の計算
 
 ### Source Code {.unnumbered}
 

@@ -1,9 +1,9 @@
-## 遅延評価 SegmentTree (範囲更新と総和) {#LazySetSumSegmentTree}
-遅延評価の利点として時系列が重要な操作も扱え、"範囲をある値にする" というのも出来る。 
+## 遅延評価 SegmentTree (区間更新と総和) {#LazySetSumSegmentTree}
+遅延評価の利点として時系列が重要な操作も扱え、"区間をある値にする" というのも出来る。 
 
 ### 計算量 {#complecity .unnumbered}
-+ set(v,s,t): O(log n) ※ 範囲[s, t) を v に更新
-+ sum(s,t): O(log n) ※範囲[s,t)の和の計算
++ set(v,s,t): O(log n) ※ 区間[s, t) を v に更新
++ sum(s,t): O(log n) ※区間[s, t) の和の計算
 
 ### Source Code {.unnumbered}
 

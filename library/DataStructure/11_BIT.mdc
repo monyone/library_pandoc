@@ -4,7 +4,7 @@
 
 ### 計算量 {#complecity .unnumbered}
 + add(k)  : O(log n) ※単一の値の更新
-+ sum(s,t): O(log n) ※範囲の和の計算
++ sum(s,t): O(log n) ※区間の和の計算
 
 ### Source Code {.unnumbered}
 ~~~~{BIT.java}

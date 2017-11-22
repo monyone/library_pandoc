@@ -1,9 +1,9 @@
 ## SegmentTree (単一加算と総和) {#SumSegmentTree}
-範囲に関わるクエリを高速に処理するデータ構造.
+区間に関わるクエリを高速に処理するデータ構造.
 
 ### 計算量 {#complecity .unnumbered}
 + add(k)  : O(log n) ※単一の値の更新
-+ get(s,t): O(log n) ※範囲の値の計算
++ get(s,t): O(log n) ※区間の和の計算
 
 ### Source Code {.unnumbered}
 
