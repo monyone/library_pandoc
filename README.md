@@ -10,9 +10,11 @@ source: [![Build Status](https://travis-ci.org/monyone/library_pandoc.svg?branch
 
 Web版について
 ------------
-ここでビルドしたのを teihen_library の gh-pages に張り付ける事にしました。
+ここでビルドしたのを teihen_library の gh-pages に張り付ける事にしました。  
+(リンク貼り直すのも面倒くさいので...)
 
-(なので teihen_library の方はもう gh-pages 以外は更新しません。)
+
+なので teihen_library の方はもう gh-pages 以外は基本的に更新しません。
 
 PDF版について
 ------------
@@ -20,20 +22,33 @@ PDF版について
 
 依存ソフトウェア
 ----------------
-+ source (ソースのビルド、簡単なテスト用)
+
+大体 JDK8 と texlive-lang-cjk とmaven2 と python3 があれば動く
+
++ source (ソースのビルド、簡単なテスト用)  
   + Java (OracleJDK 8)
   + maven2 (ビルド, テスト)
 
-+ verify (実際に問題に張り付けられる体裁で管理する)
++ verify (実際に問題に張り付けられる体裁で管理する)  
   + Java (OracleJDK 8)
   + maven2 (ビルド)
   + python3 (貼り付け)
 
-+ library (pdf 版 と html 版 のタイプセット)
++ library (pdf 版 と html 版 のタイプセット)  
   + pandoc
   + python3 (切り抜き, 貼り付け用)
   + LaTeX (platex, dvipdfmx, listings)
   + make (LaTeX のタイプセット用)
+
+使い方
+------
++ source  
+  + mvn compile でちゃんとコンパイル出来るか確認できます。  
+  + `mvn test jacoco:report` でカバレッジが見れます。
++ verify  
+  + library の方のコマンドで .template が .java になります。 
+  + mvn compile でちゃんと貼り付けた物がコンパイルに通るか確認できます。
+
 
 注意
 ----
