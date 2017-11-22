@@ -25,7 +25,7 @@ public class MaximumBipartiteMatching_Include {
 		return count;
 	}
 
-	public static boolean augment(ArrayList<HashSet<Integer>> adj, int curr, int[] match, boolean[] visited) {
+	private static boolean augment(ArrayList<HashSet<Integer>> adj, int curr, int[] match, boolean[] visited) {
 		if(curr < 0){return true; }
 
 		for(final int next : adj.get(curr)) {

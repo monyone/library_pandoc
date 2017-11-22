@@ -1,0 +1,32 @@
+package jp.monyone.verify.AOJ.GRL7A.MaximumBipartiteMatching;
+
+import java.util.Arrays;
+
+public class Main {
+		
+	//@paste Graph.MaximumBipartiteMatching
+		
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		
+		final int X = sc.nextInt();
+		final int Y = sc.nextInt();
+		final int E = sc.nextInt();
+		
+		final int size = X + Y;
+		ArrayList<HashSet<Integer>> adj = new ArrayList<HashSet<Integer>>();
+		for(int i = 0; i < size; i++){ adj.add(new HashSet<Integer>()); }
+		
+		for(int i = 0; i < E; i++){
+			final int x = sc.nextInt();
+			final int y = sc.nextInt();
+			
+			adj.get(x).add(X + y);
+		}
+		
+		System.out.println(maximumBipartiteMatching(X, adj));
+	}
+	
+	//@paste Template.Scanner
+}
+
