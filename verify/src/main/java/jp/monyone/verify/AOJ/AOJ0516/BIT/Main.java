@@ -48,10 +48,9 @@ public class Main {
 			int max = Integer.MIN_VALUE;
 			for(int start = 0; start < n - k + 1; start++){
 				max = Math.max(max, bit.sum(start, start + k));
-				//System.out.println("[" + start + " " + (start + k) + ") = " + bit.sum(start, start + k));
 			}
-		
-		System.out.println(max);
+			
+			System.out.println(max);
 		}
 	}
 }
