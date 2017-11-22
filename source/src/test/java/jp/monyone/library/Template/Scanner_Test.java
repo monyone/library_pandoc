@@ -10,8 +10,24 @@ import static org.junit.Assert.assertThat;
 
 public class Scanner_Test {
 
-	public void tokenize_test(String ... strs){
+	public void one_space_test(String ... strs){
 		try(Scanner sc = new Scanner(new ByteArrayInputStream(String.join(" ", strs).getBytes()))) {
+			for(final String str : strs){
+				assertThat(sc.next(), is(str));
+			}
+		}
+	}
+
+	public void two_space_test(String ... strs){
+		try(Scanner sc = new Scanner(new ByteArrayInputStream(String.join("  ", strs).getBytes()))) {
+			for(final String str : strs){
+				assertThat(sc.next(), is(str));
+			}
+		}
+	}
+
+	public void break_line_test(String ... strs){
+		try(Scanner sc = new Scanner(new ByteArrayInputStream(String.join("\n", strs).getBytes()))) {
 			for(final String str : strs){
 				assertThat(sc.next(), is(str));
 			}
@@ -24,9 +40,16 @@ public class Scanner_Test {
 		}
 	}
 
+	// とりあえず C0 カバレッジは 100% になるように
 	@Test public void basic_usage() {
-		tokenize_test("test");
-		tokenize_test("test1", "test2", "test3");
+		one_space_test("test");
+		one_space_test("test1", "test2", "test3");
+
+		two_space_test("test");
+		two_space_test("test1", "test2", "test3");
+
+		break_line_test("test");
+		break_line_test("test1", "test2", "test3");
 
 		nextInt_test(1);
 		nextInt_test(Integer.MAX_VALUE);
