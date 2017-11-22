@@ -1,6 +1,6 @@
-## 最小重み最大マッチング (DP) {#MinimumGeneralMatchingDP}
-bitDP で一般のグラフのコスト最小マッチングを求める。  
-片側の埋める順序を予め決めとけば、計算量が O(V^2 * V) になる。 
+## 最小重み最大マッチング (bitDP) {#MinimumGeneralMatchingDP}
+bitDP で一般のグラフのコスト最小マッチングを求める.  
+片側の埋める順序を予め決めとけば、計算量が O(2^V * V) になる. 
 
 ### Source Code {.unnumbered}
 ~~~~{MinimumGeneralMatchingDP.java}

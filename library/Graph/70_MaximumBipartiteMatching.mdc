@@ -1,0 +1,15 @@
+## 二部マッチング {#MaximumBipartileMatching}
+二部マッチングはフォードファルカーソン法で O(V*(V+E)) で求められる.  
+左の頂点の上限(開区間)を入れて使う事.
+
+### Source Code {.unnumbered}
+~~~~{MaximumBipartiteMatching.java}
+~~~~
+
+\withoutTeXbegin
+
+### Verified {.unnumbered}
++ [AOJ GRL-7-A (Bipartite Matching)]() [[提出]](http://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=2618025)
+
+\withoutTeXend
+
