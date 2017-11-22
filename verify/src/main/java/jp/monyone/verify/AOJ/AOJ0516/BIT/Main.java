@@ -27,15 +27,6 @@ public class Main {
 			}
 			return ret;
 		}
-		
-		public int get(int k){ // k : 0-indexed
-			int p = Integer.highestOneBit(dat.length - 1);
-			for(int q = p; q > 0; q >>= 1, p |= q){
-				if( p >= dat.length || k < dat[p]) p ^= q;
-				else k -= dat[p];
-			}
-			return p;
-		}
 	}
 	
 	public static void main(String[] args){
