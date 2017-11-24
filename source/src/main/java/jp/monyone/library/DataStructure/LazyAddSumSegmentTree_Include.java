@@ -4,6 +4,7 @@ public class LazyAddSumSegmentTree_Include {
 	// 以下のクエリに対応するデータ構造
 	// add(v, l, r) : [l, r) に v を足すクエリ
 	// sum(l, r)    : [l, r) の合計を取得するクエリ
+	// 全ての要素の初期値は 0 である事に注意
 	
 	//@start
 	public static class LazyAddSumSegmentTree{
