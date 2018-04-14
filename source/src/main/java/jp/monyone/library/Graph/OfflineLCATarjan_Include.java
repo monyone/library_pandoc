@@ -3,6 +3,10 @@ package jp.monyone.library.Graph;
 import static jp.monyone.library.DataStructure.UnionFind_Include.UnionFind;
 
 public class OfflineLCATarjan_Include {
+	// スパソあまな感じだけど、このままだと計算量がヤバい
+	// us, vs のループがあるので O(クエリ数 * 木) になっちゃう
+	// https://yukicoder.me/submissions/101078 のように後で直す
+
 	//@start
 	// DFS で 前順走査(preorder) で 一番近い親を探す. 部分木のマージに, UnionFind を使う .
 	public static void dfs(int[] us, int[] vs, int[] lcas, int node, int parent,
